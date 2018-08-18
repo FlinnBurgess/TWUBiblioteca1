@@ -1,6 +1,7 @@
 package com.twu.biblioteca;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Library {
     private ArrayList<Book> bookList;
@@ -11,6 +12,7 @@ public class Library {
     }
 
     public ArrayList<Book> getBooks() {
+        Collections.sort(bookList);
         return bookList;
     }
 
@@ -24,6 +26,15 @@ public class Library {
             throw new BookNotAvailableException(
                     "Book with title: " + title + ", author: " + author + " and date published: " + yearPublished + " not found"
             );
+        }
+    }
+
+    public void returnBook(String title, String author, int yearPublished) {
+        Book bookToReturn = new Book(title, author, yearPublished);
+
+        if (checkedOut.contains(bookToReturn)) {
+            bookList.add(bookToReturn);
+            checkedOut.remove(bookToReturn);
         }
     }
 }
