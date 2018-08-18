@@ -14,12 +14,16 @@ public class Library {
         return bookList;
     }
 
-    public void checkOutBook(String title, String author, int yearPublished) {
+    public void checkOutBook(String title, String author, int yearPublished) throws BookNotAvailableException {
         Book bookToCheckOut = new Book(title, author, yearPublished);
 
         if (bookList.contains(bookToCheckOut)) {
             checkedOut.add(bookToCheckOut);
             bookList.remove(bookToCheckOut);
+        } else {
+            throw new BookNotAvailableException(
+                    "Book with title: " + title + ", author: " + author + " and date published: " + yearPublished + " not found"
+            );
         }
     }
 }

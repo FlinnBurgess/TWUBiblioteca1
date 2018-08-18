@@ -34,7 +34,7 @@ public class LibraryTest {
     }
 
     @Test
-    public void testCheckoutRemovesBookFromAvailableBooks() {
+    public void testCheckoutRemovesBookFromAvailableBooks() throws BookNotAvailableException {
         library.checkOutBook("title1", "author1", 2000);
 
         ArrayList<Book> bookList = new ArrayList<Book>(Arrays.asList(book2));
@@ -43,7 +43,7 @@ public class LibraryTest {
     }
 
     @Test(expected = BookNotAvailableException.class)
-    public void testCheckoutThrowsExceptionOnUnavailableBook() {
+    public void testCheckoutThrowsExceptionOnUnavailableBook() throws BookNotAvailableException {
         library.checkOutBook("unavailable", "unavailable", 0);
     }
 }
