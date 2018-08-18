@@ -31,6 +31,10 @@ public class LibraryTest extends TestCase {
 
     @Test
     public void testCheckoutRemovesBookFromAvailableBooks() {
+        Book checkedOut = library.checkOutBook("title1", "author1", 2000);
 
+        ArrayList<Book> bookList = new ArrayList<Book>(Arrays.asList(book2));
+
+        assertTrue(bookList.equals(library.getBooks()));
     }
 }
