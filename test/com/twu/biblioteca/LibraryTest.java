@@ -7,6 +7,7 @@ import org.junit.Test;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertFalse;
@@ -30,6 +31,9 @@ public class LibraryTest {
         ArrayList<Book> bookList = new ArrayList<Book>(Arrays.asList(book1, book2));
         ArrayList<Book> differentBookList = new ArrayList<Book>(Arrays.asList(book1));
 
+        Collections.sort(bookList);
+        Collections.sort(differentBookList);
+
         assertTrue(bookList.equals(library.getBooks()));
         assertFalse(differentBookList.equals(library.getBooks()));
     }
@@ -39,6 +43,7 @@ public class LibraryTest {
         library.checkOutBook("title1", "author1", 2000);
 
         ArrayList<Book> bookList = new ArrayList<Book>(Arrays.asList(book2));
+        Collections.sort(bookList);
 
         assertTrue(bookList.equals(library.getBooks()));
     }
@@ -54,6 +59,7 @@ public class LibraryTest {
         library.returnBook("title1", "author1", 2000);
 
         ArrayList<Book> bookList = new ArrayList<Book>(Arrays.asList(book1, book2));
+        Collections.sort(bookList);
 
         assertTrue(bookList.equals(library.getBooks()));
     }

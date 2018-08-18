@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="71ee3bac-052a-4808-9de3-9e53b633604c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Library.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Library.java" />
+      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/LibraryTest.java" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/LibraryTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,7 +28,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Library.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Library.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Library.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
@@ -43,18 +43,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LibraryTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LibraryTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/LibraryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="57" column="19" lean-forward="false" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
+            <state relative-caret-position="680">
+              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#589#595#0" expanded="true" />
-                <element signature="e#787#793#0" expanded="true" />
-                <element signature="e#881#887#0" expanded="true" />
-                <element signature="e#1254#1260#0" expanded="true" />
-                <element signature="e#1837#1843#0" expanded="true" />
+                <element signature="e#619#625#0" expanded="true" />
+                <element signature="e#817#823#0" expanded="true" />
+                <element signature="e#911#917#0" expanded="true" />
+                <element signature="e#1366#1372#0" expanded="true" />
+                <element signature="e#1985#1991#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -141,9 +141,9 @@
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/Customer.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/BookNotAvailableException.java" />
-        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/LibraryTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Book.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Library.java" />
+        <option value="$PROJECT_DIR$/test/com/twu/biblioteca/LibraryTest.java" />
       </list>
     </option>
   </component>
@@ -232,7 +232,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LibraryTest.testReturnBookUpdatesListOfAvailableBooks">
+  <component name="RunManager" selected="JUnit.LibraryTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -442,10 +442,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.LibraryTest.testReturnBookUpdatesListOfAvailableBooks" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.LibraryTest.testCheckoutThrowsExceptionOnUnavailableBook" />
-        <item index="2" class="java.lang.String" itemvalue="Application.BibliotecaApp" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.LibraryTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.LibraryTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.LibraryTest.testReturnBookUpdatesListOfAvailableBooks" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.LibraryTest.testCheckoutThrowsExceptionOnUnavailableBook" />
+        <item index="3" class="java.lang.String" itemvalue="Application.BibliotecaApp" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.LibraryTest.testLibraryReturnsCorrectBookList" />
       </list>
     </recent_temporary>
@@ -463,7 +463,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1534516162491</updated>
-      <workItem from="1534516163610" duration="19563000" />
+      <workItem from="1534516163610" duration="19745000" />
     </task>
     <task id="LOCAL-00001" summary="Added welcome message on initial launch of app">
       <created>1534518217521</created>
@@ -577,7 +577,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534620393176</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Book list is now returned from the library sorted by title">
+      <created>1534620573415</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1534620573415</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -590,6 +597,9 @@
     <history-entry file="LibraryTest - 2018.08.18 at 18h 13m 15s.xml">
       <configuration name="LibraryTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="LibraryTest - 2018.08.18 at 20h 31m 49s.xml">
+      <configuration name="LibraryTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="LibraryTest_testCheckoutRemovesBookFromAvailableBooks - 2018.08.18 at 18h 08m 36s.xml">
       <configuration name="LibraryTest.testCheckoutRemovesBookFromAvailableBooks" configurationId="JUnit" />
     </history-entry>
@@ -598,9 +608,6 @@
     </history-entry>
     <history-entry file="LibraryTest_testCheckoutThrowsExceptionOnUnavailableBook - 2018.08.18 at 19h 15m 35s.xml">
       <configuration name="LibraryTest.testCheckoutThrowsExceptionOnUnavailableBook" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LibraryTest_testLibraryReturnsCorrectBookList - 2018.08.18 at 17h 20m 35s.xml">
-      <configuration name="LibraryTest.testLibraryReturnsCorrectBookList" configurationId="JUnit" />
     </history-entry>
     <history-entry file="LibraryTest_testLibraryReturnsCorrectBookList - 2018.08.18 at 17h 26m 27s.xml">
       <configuration name="LibraryTest.testLibraryReturnsCorrectBookList" configurationId="JUnit" />
@@ -613,7 +620,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19563000" />
+    <option name="totallyTimeSpent" value="19745000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -627,7 +634,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Flutter Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -673,7 +680,8 @@
     <MESSAGE value="checkout method now throws exception on unavailable books" />
     <MESSAGE value="Added test that returning a book updates the available books list" />
     <MESSAGE value="Made Book implement Comparable so it could be ordered" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made Book implement Comparable so it could be ordered" />
+    <MESSAGE value="Book list is now returned from the library sorted by title" />
+    <option name="LAST_COMMIT_MESSAGE" value="Book list is now returned from the library sorted by title" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -776,21 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/LibraryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="57" column="19" lean-forward="false" selection-start-line="57" selection-start-column="19" selection-end-line="57" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#589#595#0" expanded="true" />
-            <element signature="e#787#793#0" expanded="true" />
-            <element signature="e#881#887#0" expanded="true" />
-            <element signature="e#1254#1260#0" expanded="true" />
-            <element signature="e#1837#1843#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Library.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -800,6 +793,21 @@
             <element signature="e#203#209#0" expanded="true" />
             <element signature="e#259#260#0" expanded="true" />
             <element signature="e#299#300#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/LibraryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#619#625#0" expanded="true" />
+            <element signature="e#817#823#0" expanded="true" />
+            <element signature="e#911#917#0" expanded="true" />
+            <element signature="e#1366#1372#0" expanded="true" />
+            <element signature="e#1985#1991#0" expanded="true" />
           </folding>
         </state>
       </provider>
