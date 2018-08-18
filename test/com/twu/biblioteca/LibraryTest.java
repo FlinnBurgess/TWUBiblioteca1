@@ -1,18 +1,22 @@
 package com.twu.biblioteca;
 
 import junit.framework.TestCase;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class LibraryTest extends TestCase {
-    Library library;
-    Book book1;
-    Book book2;
+import static junit.framework.TestCase.assertTrue;
+import static org.junit.Assert.assertFalse;
 
-    @Override
-    protected void setUp(){
+public class LibraryTest {
+    private Library library;
+    private Book book1;
+    private Book book2;
+
+    @Before
+    public void setUp(){
         book1 = new Book("title1", "author1", 2000);
         book2 = new Book("title2", "author2", 2000);
         ArrayList<Book> bookList = new ArrayList<Book>(Arrays.asList(book1, book2));
@@ -31,7 +35,7 @@ public class LibraryTest extends TestCase {
 
     @Test
     public void testCheckoutRemovesBookFromAvailableBooks() {
-        Book checkedOut = library.checkOutBook("title1", "author1", 2000);
+        library.checkOutBook("title1", "author1", 2000);
 
         ArrayList<Book> bookList = new ArrayList<Book>(Arrays.asList(book2));
 
