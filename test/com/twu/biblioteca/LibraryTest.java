@@ -41,4 +41,9 @@ public class LibraryTest {
 
         assertTrue(bookList.equals(library.getBooks()));
     }
+
+    @Test(expected = BookNotAvailableException.class)
+    public void testCheckoutThrowsExceptionOnUnavailableBook() {
+        library.checkOutBook("unavailable", "unavailable", 0);
+    }
 }
