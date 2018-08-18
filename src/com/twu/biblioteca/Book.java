@@ -1,6 +1,6 @@
 package com.twu.biblioteca;
 
-public class Book {
+public class Book implements Comparable {
     private String title;
     private String author;
     private int yearPublished;
@@ -44,5 +44,12 @@ public class Book {
             && this.yearPublished == book.getYearPublished()
             && this.title.equals(book.getTitle())
         );
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Book bookToCompare = (Book) o;
+
+        return this.title.compareTo(bookToCompare.getTitle());
     }
 }
