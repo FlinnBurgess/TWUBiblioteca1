@@ -4,6 +4,7 @@ import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -45,5 +46,15 @@ public class LibraryTest {
     @Test(expected = BookNotAvailableException.class)
     public void testCheckoutThrowsExceptionOnUnavailableBook() throws BookNotAvailableException {
         library.checkOutBook("unavailable", "unavailable", 0);
+    }
+
+    @Test
+    public void testReturnBookUpdatesListOfAvailableBooks() throws BookNotAvailableException {
+        library.checkOutBook("title1", "author1", 2000);
+        library.returnBook("title1", "author1", 2000);
+
+        ArrayList<Book> bookList = new ArrayList<Book>(Arrays.asList(book1, book2));
+
+        assertTrue(bookList.equals(library.getBooks()));
     }
 }
