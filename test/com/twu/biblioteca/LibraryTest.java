@@ -54,7 +54,7 @@ public class LibraryTest {
     }
 
     @Test
-    public void testReturnBookUpdatesListOfAvailableBooks() throws BookNotAvailableException {
+    public void testReturnBookUpdatesListOfAvailableBooks() throws BookNotAvailableException, BookNotCheckedOutException {
         library.checkOutBook(book1.getTitle(), book1.getAuthor(), book1.getYearPublished());
         library.checkOutBook(book2.getTitle(), book2.getAuthor(), book2.getYearPublished());
 

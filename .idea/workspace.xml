@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71ee3bac-052a-4808-9de3-9e53b633604c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BookNotCheckedOutException.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Library.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Library.java" />
       <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/LibraryTest.java" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/LibraryTest.java" />
@@ -479,7 +478,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1534516162491</updated>
-      <workItem from="1534516163610" duration="21279000" />
+      <workItem from="1534516163610" duration="21332000" />
     </task>
     <task id="LOCAL-00001" summary="Added welcome message on initial launch of app">
       <created>1534518217521</created>
@@ -614,7 +613,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534671516502</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Added new Exception class for returning unrecognised books">
+      <created>1534671861087</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1534671861087</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -650,7 +656,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21279000" />
+    <option name="totallyTimeSpent" value="21332000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -713,7 +719,8 @@
     <MESSAGE value="Book list is now returned from the library sorted by title" />
     <MESSAGE value="Added code to sort generated book lists before comparison in test cases" />
     <MESSAGE value="Added test to check that returning a non-checked-out book throws an exception" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added test to check that returning a non-checked-out book throws an exception" />
+    <MESSAGE value="Added new Exception class for returning unrecognised books" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new Exception class for returning unrecognised books" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
