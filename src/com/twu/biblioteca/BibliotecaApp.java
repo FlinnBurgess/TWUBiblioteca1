@@ -14,7 +14,7 @@ public class BibliotecaApp {
         Library library = new Library(bookList);
 
         System.out.println("Welcome to the Biblioteca library system!");
-        ArrayList<String> menuOptions = new ArrayList<String>(Arrays.asList("List Books"));
+        ArrayList<String> menuOptions = new ArrayList<String>(Arrays.asList("List Books", "Quit"));
 
         System.out.println("To use the system, please type one of the following commands: ");
         for (String option : menuOptions) {
