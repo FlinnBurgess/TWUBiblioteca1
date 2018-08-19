@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71ee3bac-052a-4808-9de3-9e53b633604c" name="Default" comment="Added test for overridden equality method of movie">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Movie.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/MovieTest.java" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/MovieTest.java" />
     </list>
@@ -28,7 +27,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MovieTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MovieTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/MovieTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
@@ -40,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Movie.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Movie.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Movie.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="476">
@@ -292,7 +291,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MovieTest.testMovieEquality">
+  <component name="RunManager" selected="JUnit.BookTest.testBookEquality">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -502,10 +501,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.MovieTest.testMovieEquality" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.BookTest.testBookEquality" />
         <item index="1" class="java.lang.String" itemvalue="JUnit.LibraryTest" />
-        <item index="2" class="java.lang.String" itemvalue="Application.BibliotecaApp" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BookTest.testBookEquality" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.MovieTest.testMovieEquality" />
+        <item index="3" class="java.lang.String" itemvalue="Application.BibliotecaApp" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.LibraryTest.testReturnNonCheckedOutBookThrowsException" />
       </list>
     </recent_temporary>
@@ -523,7 +522,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1534516162491</updated>
-      <workItem from="1534516163610" duration="29509000" />
+      <workItem from="1534516163610" duration="29574000" />
     </task>
     <task id="LOCAL-00001" summary="Added welcome message on initial launch of app">
       <created>1534518217521</created>
@@ -721,7 +720,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534695211290</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Added movie class with overridden equals method">
+      <created>1534696244824</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1534696244824</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -731,11 +737,8 @@
     <history-entry file="BookTest_testBookEquality - 2018.08.19 at 11h 39m 21s.xml">
       <configuration name="BookTest.testBookEquality" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LibraryTest - 2018.08.18 at 18h 13m 01s.xml">
-      <configuration name="LibraryTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LibraryTest - 2018.08.18 at 18h 13m 15s.xml">
-      <configuration name="LibraryTest" configurationId="JUnit" />
+    <history-entry file="BookTest_testBookEquality - 2018.08.19 at 17h 31m 12s.xml">
+      <configuration name="BookTest.testBookEquality" configurationId="JUnit" />
     </history-entry>
     <history-entry file="LibraryTest - 2018.08.18 at 20h 31m 49s.xml">
       <configuration name="LibraryTest" configurationId="JUnit" />
@@ -743,8 +746,8 @@
     <history-entry file="LibraryTest - 2018.08.19 at 10h 45m 11s.xml">
       <configuration name="LibraryTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LibraryTest_testCheckoutThrowsExceptionOnUnavailableBook - 2018.08.18 at 19h 07m 04s.xml">
-      <configuration name="LibraryTest.testCheckoutThrowsExceptionOnUnavailableBook" configurationId="JUnit" />
+    <history-entry file="LibraryTest - 2018.08.19 at 17h 31m 07s.xml">
+      <configuration name="LibraryTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="LibraryTest_testCheckoutThrowsExceptionOnUnavailableBook - 2018.08.18 at 19h 15m 35s.xml">
       <configuration name="LibraryTest.testCheckoutThrowsExceptionOnUnavailableBook" configurationId="JUnit" />
@@ -755,9 +758,12 @@
     <history-entry file="LibraryTest_testReturnNonCheckedOutBookThrowsException - 2018.08.19 at 10h 45m 07s.xml">
       <configuration name="LibraryTest.testReturnNonCheckedOutBookThrowsException" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MovieTest_testMovieEquality - 2018.08.19 at 17h 30m 51s.xml">
+      <configuration name="MovieTest.testMovieEquality" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29509000" />
+    <option name="totallyTimeSpent" value="29574000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -765,13 +771,13 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Flutter Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -801,7 +807,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added Library class and method for getting book list." />
     <MESSAGE value="Added assertion to test case to compare differing booklists" />
     <MESSAGE value="Moved duplicate test code into setup method and replaced assertions with junit Assertion objects" />
     <MESSAGE value="Added test that checking out book removes the book from the available list" />
@@ -826,7 +831,8 @@
     <MESSAGE value="Updated main application to allow user to return books" />
     <MESSAGE value="Added test for overriden equality method of movie" />
     <MESSAGE value="Added test for overridden equality method of movie" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added test for overridden equality method of movie" />
+    <MESSAGE value="Added movie class with overridden equals method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added movie class with overridden equals method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -900,48 +906,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/LibraryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#484#490#0" expanded="true" />
-            <element signature="e#682#688#0" expanded="true" />
-            <element signature="e#776#782#0" expanded="true" />
-            <element signature="e#1281#1287#0" expanded="true" />
-            <element signature="e#2101#2107#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1207">
           <caret line="71" column="26" lean-forward="true" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Library.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="30" lean-forward="false" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#203#209#0" expanded="true" />
-            <element signature="e#259#260#0" expanded="true" />
-            <element signature="e#299#300#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BookTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -969,16 +937,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/MovieTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="53" lean-forward="false" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Movie.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -1000,6 +958,54 @@
             <element signature="e#809#810#0" expanded="true" />
             <element signature="e#850#851#0" expanded="true" />
             <element signature="e#886#887#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Library.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="30" lean-forward="false" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#203#209#0" expanded="true" />
+            <element signature="e#259#260#0" expanded="true" />
+            <element signature="e#299#300#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/LibraryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#484#490#0" expanded="true" />
+            <element signature="e#682#688#0" expanded="true" />
+            <element signature="e#776#782#0" expanded="true" />
+            <element signature="e#1281#1287#0" expanded="true" />
+            <element signature="e#2101#2107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BookTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="25" lean-forward="false" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/MovieTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="53" lean-forward="false" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

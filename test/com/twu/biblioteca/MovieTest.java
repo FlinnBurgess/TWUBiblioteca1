@@ -7,9 +7,13 @@ public class MovieTest {
 
     @Test
     public void testMovieEquality() {
-        Movie movie1 = new Movie("name", 2005, "director", 5);
-        Movie movie2 = new Movie("name", 2005, "director", 5);
+        Movie movie = new Movie("name", 2005, "director", 5);
+        Movie sameMovie = new Movie("NAME", 2005, "director", 5);
 
-        Assert.assertTrue(movie1.equals(movie2));
+        Assert.assertTrue(movie.equals(sameMovie));
+
+        Movie differentMovie = new Movie("different name", 2005, "director", 5);
+
+        Assert.assertFalse(movie.equals(differentMovie));
     }
 }
