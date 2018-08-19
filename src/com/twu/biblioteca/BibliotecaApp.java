@@ -13,13 +13,38 @@ public class BibliotecaApp {
         ArrayList<Book> bookList = new ArrayList<Book>(Arrays.asList(book1, book2, book3));
         Library library = new Library(bookList);
 
-        Scanner input = new Scanner(System.in);
-
         System.out.println("Welcome to the Biblioteca library system!");
-        System.out.println("Books currently available:");
+        ArrayList<String> menuOptions = new ArrayList<String>(Arrays.asList("List Books"));
 
-        for (Book book : library.getBooks()) {
-            System.out.println(book.getTitle() + ", " + book.getAuthor() + ", " + book.getYearPublished());
+        System.out.println("To use the system, please type one of the following commands: ");
+        for (String option : menuOptions) {
+            System.out.println(option);
         }
+
+        Scanner input = new Scanner(System.in);
+        String command = input.nextLine().toLowerCase();
+
+        while (!command.equals("quit")) {
+            switch (command) {
+                case "list books":
+                    System.out.println("Books currently available:");
+
+                    for (Book book : library.getBooks()) {
+                        System.out.println(book.getTitle() + ", " + book.getAuthor() + ", " + book.getYearPublished());
+                    }
+
+                    break;
+
+                default:
+                    System.out.println("Please enter a valid command!");
+                    for (String option : menuOptions) {
+                        System.out.println(option);
+                    }
+            }
+
+            System.out.println("Please enter another command: ");
+            command = input.nextLine().toLowerCase();
+        }
+
     }
 }
