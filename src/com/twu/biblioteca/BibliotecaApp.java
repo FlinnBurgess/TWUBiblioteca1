@@ -42,10 +42,10 @@ public class BibliotecaApp {
                     System.out.println("Please enter the year the book was published:");
                     yearPublished = Integer.parseInt(input.nextLine());
 
-                    Book book = new Book(title, author, yearPublished);
+                    Book bookToCheckout = new Book(title, author, yearPublished);
 
                     try {
-                        library.checkOutBook(book);
+                        library.checkOutBook(bookToCheckout);
                         System.out.println("Thank you! Enjoy the book");
                     } catch (BookNotAvailableException exception) {
                         System.out.println("That book is not available.");
@@ -60,8 +60,10 @@ public class BibliotecaApp {
                     System.out.println("Please enter the year the book was published:");
                     yearPublished = Integer.parseInt(input.nextLine());
 
+                    Book bookToReturn = new Book(title, author, yearPublished);
+
                     try {
-                        library.returnBook(title, author, yearPublished);
+                        library.returnBook(bookToReturn);
                         System.out.println("Thank you for returning the book.");
                     } catch (BookNotCheckedOutException exception) {
                         System.out.println("That is not a valid book to return.");

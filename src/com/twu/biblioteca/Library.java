@@ -28,17 +28,15 @@ public class Library {
         }
     }
 
-    public void returnBook(String title, String author, int yearPublished) throws BookNotCheckedOutException {
-        Book bookToReturn = new Book(title, author, yearPublished);
-
-        if (checkedOut.contains(bookToReturn)) {
-            bookList.add(bookToReturn);
-            checkedOut.remove(bookToReturn);
+    public void returnBook(Book book) throws BookNotCheckedOutException {
+        if (checkedOut.contains(book)) {
+            bookList.add(book);
+            checkedOut.remove(book);
         } else {
             throw new BookNotCheckedOutException(
                     String.format(
                             "Book with title: %s, author: %s and date published: %d has not been checked out of this library",
-                            title, author, yearPublished
+                            book.getTitle(), book.getAuthor(), book.getYearPublished()
                     )
             );
         }
