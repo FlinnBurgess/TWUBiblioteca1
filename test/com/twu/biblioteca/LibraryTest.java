@@ -56,7 +56,7 @@ public class LibraryTest {
         library.checkOutBook(book1);
         library.checkOutBook(book2);
 
-        library.returnBook(book1.getTitle(), book1.getAuthor(), book1.getYearPublished());
+        library.returnBook(book1);
 
         ArrayList<Book> bookList = new ArrayList<>(Arrays.asList(book1));
         Collections.sort(bookList);
@@ -66,6 +66,6 @@ public class LibraryTest {
 
     @Test(expected = BookNotCheckedOutException.class)
     public void testReturnNonCheckedOutBookThrowsException() throws BookNotCheckedOutException {
-        library.returnBook("title1", "author1", 2000);
+        library.returnBook(book1);
     }
 }
