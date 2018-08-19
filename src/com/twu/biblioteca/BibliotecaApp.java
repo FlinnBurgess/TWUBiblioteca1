@@ -21,9 +21,6 @@ public class BibliotecaApp {
         String command = input.nextLine().toLowerCase();
 
         while (!command.equals("quit")) {
-            String title;
-            String author;
-            int yearPublished;
 
             switch (command) {
                 case "list books":
@@ -35,14 +32,7 @@ public class BibliotecaApp {
 
                     break;
                 case "checkout book":
-                    System.out.println("Please enter the title of the book:");
-                    title = input.nextLine();
-                    System.out.println("Please enter the author of the book:");
-                    author = input.nextLine();
-                    System.out.println("Please enter the year the book was published:");
-                    yearPublished = Integer.parseInt(input.nextLine());
-
-                    Book bookToCheckout = new Book(title, author, yearPublished);
+                    Book bookToCheckout = generateBookFromUserInput(input);
 
                     try {
                         library.checkOutBook(bookToCheckout);
@@ -53,14 +43,7 @@ public class BibliotecaApp {
 
                     break;
                 case "return book":
-                    System.out.println("Please enter the title of the book:");
-                    title = input.nextLine();
-                    System.out.println("Please enter the author of the book:");
-                    author = input.nextLine();
-                    System.out.println("Please enter the year the book was published:");
-                    yearPublished = Integer.parseInt(input.nextLine());
-
-                    Book bookToReturn = new Book(title, author, yearPublished);
+                    Book bookToReturn = generateBookFromUserInput(input);
 
                     try {
                         library.returnBook(bookToReturn);
@@ -90,5 +73,16 @@ public class BibliotecaApp {
         ArrayList<Book> bookList = new ArrayList<>(Arrays.asList(book1, book2, book3));
 
         return new Library(bookList);
+    }
+
+    private static Book generateBookFromUserInput(Scanner input) {
+        System.out.println("Please enter the title of the book:");
+        String title = input.nextLine();
+        System.out.println("Please enter the author of the book:");
+        String author = input.nextLine();
+        System.out.println("Please enter the year the book was published:");
+        int yearPublished = Integer.parseInt(input.nextLine());
+
+        return new Book(title, author, yearPublished);
     }
 }
