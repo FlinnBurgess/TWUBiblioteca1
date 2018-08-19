@@ -14,7 +14,7 @@ public class BibliotecaApp {
         Library library = new Library(bookList);
 
         System.out.println("Welcome to the Biblioteca library system!");
-        ArrayList<String> menuOptions = new ArrayList<>(Arrays.asList("List Books", "Quit", "Checkout Book"));
+        ArrayList<String> menuOptions = new ArrayList<>(Arrays.asList("List Books", "Checkout Book", "Return Book", "Quit"));
 
         System.out.println("To use the system, please type one of the following commands: ");
         for (String option : menuOptions) {
@@ -25,6 +25,10 @@ public class BibliotecaApp {
         String command = input.nextLine().toLowerCase();
 
         while (!command.equals("quit")) {
+            String title;
+            String author;
+            int yearPublished;
+
             switch (command) {
                 case "list books":
                     System.out.println("Books currently available:");
@@ -36,17 +40,33 @@ public class BibliotecaApp {
                     break;
                 case "checkout book":
                     System.out.println("Please enter the title of the book:");
-                    String title = input.nextLine();
+                    title = input.nextLine();
                     System.out.println("Please enter the author of the book:");
-                    String author = input.nextLine();
+                    author = input.nextLine();
                     System.out.println("Please enter the year the book was published:");
-                    int yearPublished = Integer.parseInt(input.nextLine());
+                    yearPublished = Integer.parseInt(input.nextLine());
 
                     try {
                         library.checkOutBook(title, author, yearPublished);
                         System.out.println("Thank you! Enjoy the book");
                     } catch (BookNotAvailableException exception) {
                         System.out.println("That book is not available.");
+                    }
+
+                    break;
+                case "return book":
+                    System.out.println("Please enter the title of the book:");
+                    title = input.nextLine();
+                    System.out.println("Please enter the author of the book:");
+                    author = input.nextLine();
+                    System.out.println("Please enter the year the book was published:");
+                    yearPublished = Integer.parseInt(input.nextLine());
+
+                    try {
+                        library.returnBook(title, author, yearPublished);
+                        System.out.println("Thank you for returning the book.");
+                    } catch (BookNotCheckedOutException exception) {
+                        System.out.println("That is not a valid book to return.");
                     }
 
                     break;
