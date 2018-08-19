@@ -40,7 +40,7 @@ public class LibraryTest {
 
     @Test
     public void testCheckoutRemovesBookFromAvailableBooks() throws BookNotAvailableException {
-        library.checkOutBook("title1", "author1", 2000);
+        library.checkOutBook(book1.getTitle(), book1.getAuthor(), book1.getYearPublished());
 
         ArrayList<Book> bookList = new ArrayList<Book>(Arrays.asList(book2));
         Collections.sort(bookList);
@@ -55,12 +55,19 @@ public class LibraryTest {
 
     @Test
     public void testReturnBookUpdatesListOfAvailableBooks() throws BookNotAvailableException {
-        library.checkOutBook("title1", "author1", 2000);
-        library.returnBook("title1", "author1", 2000);
+        library.checkOutBook(book1.getTitle(), book1.getAuthor(), book1.getYearPublished());
+        library.checkOutBook(book2.getTitle(), book2.getAuthor(), book2.getYearPublished());
 
-        ArrayList<Book> bookList = new ArrayList<Book>(Arrays.asList(book1, book2));
+        library.returnBook(book1.getTitle(), book1.getAuthor(), book1.getYearPublished());
+
+        ArrayList<Book> bookList = new ArrayList<Book>(Arrays.asList(book1));
         Collections.sort(bookList);
 
         assertTrue(bookList.equals(library.getBooks()));
+    }
+
+    @Test(expected = BookNotCheckedOutException.class)
+    public void testReturnNonCheckedOutBookThrowsException() throws BookNotCheckedOutException {
+        library.returnBook("title1", "author1", 2000);
     }
 }
