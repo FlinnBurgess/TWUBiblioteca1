@@ -1,16 +1,13 @@
 package com.twu.biblioteca;
 
-import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-import static junit.framework.TestCase.assertTrue;
-import static org.junit.Assert.assertFalse;
+import org.junit.Assert;
 
 public class LibraryTest {
     private Library library;
@@ -34,8 +31,8 @@ public class LibraryTest {
         Collections.sort(bookList);
         Collections.sort(differentBookList);
 
-        assertTrue(bookList.equals(library.getBooks()));
-        assertFalse(differentBookList.equals(library.getBooks()));
+        Assert.assertTrue(bookList.equals(library.getBooks()));
+        Assert.assertFalse(differentBookList.equals(library.getBooks()));
     }
 
     @Test
@@ -45,7 +42,7 @@ public class LibraryTest {
         ArrayList<Book> bookList = new ArrayList<Book>(Arrays.asList(book2));
         Collections.sort(bookList);
 
-        assertTrue(bookList.equals(library.getBooks()));
+        Assert.assertTrue(bookList.equals(library.getBooks()));
     }
 
     @Test(expected = BookNotAvailableException.class)
@@ -63,7 +60,7 @@ public class LibraryTest {
         ArrayList<Book> bookList = new ArrayList<Book>(Arrays.asList(book1));
         Collections.sort(bookList);
 
-        assertTrue(bookList.equals(library.getBooks()));
+        Assert.assertTrue(bookList.equals(library.getBooks()));
     }
 
     @Test(expected = BookNotCheckedOutException.class)

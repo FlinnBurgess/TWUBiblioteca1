@@ -1,6 +1,7 @@
 package com.twu.biblioteca;
 
 import org.junit.Test;
+import org.junit.Assert;
 
 public class BookTest {
 
@@ -9,6 +10,6 @@ public class BookTest {
         Book book1 = new Book("TITLE", "author", 2008);
         Book book2 = new Book("title", "author", 2008);
 
-        assert (book1.equals(book2));
+        Assert.assertTrue(book1.equals(book2));
     }
 }
