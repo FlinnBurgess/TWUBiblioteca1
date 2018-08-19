@@ -18,15 +18,15 @@ public class LibraryTest {
     public void setUp(){
         book1 = new Book("title1", "author1", 2000);
         book2 = new Book("title2", "author2", 2000);
-        ArrayList<Book> bookList = new ArrayList<Book>(Arrays.asList(book1, book2));
+        ArrayList<Book> bookList = new ArrayList<>(Arrays.asList(book1, book2));
 
         library = new Library(bookList);
     }
 
     @Test
     public void testLibraryReturnsCorrectBookList() {
-        ArrayList<Book> bookList = new ArrayList<Book>(Arrays.asList(book1, book2));
-        ArrayList<Book> differentBookList = new ArrayList<Book>(Arrays.asList(book1));
+        ArrayList<Book> bookList = new ArrayList<>(Arrays.asList(book1, book2));
+        ArrayList<Book> differentBookList = new ArrayList<>(Arrays.asList(book1));
 
         Collections.sort(bookList);
         Collections.sort(differentBookList);
@@ -37,9 +37,9 @@ public class LibraryTest {
 
     @Test
     public void testCheckoutRemovesBookFromAvailableBooks() throws BookNotAvailableException {
-        library.checkOutBook(book1.getTitle(), book1.getAuthor(), book1.getYearPublished());
+        library.checkOutBook(book1);
 
-        ArrayList<Book> bookList = new ArrayList<Book>(Arrays.asList(book2));
+        ArrayList<Book> bookList = new ArrayList<>(Arrays.asList(book2));
         Collections.sort(bookList);
 
         Assert.assertTrue(bookList.equals(library.getBooks()));
@@ -47,17 +47,18 @@ public class LibraryTest {
 
     @Test(expected = BookNotAvailableException.class)
     public void testCheckoutThrowsExceptionOnUnavailableBook() throws BookNotAvailableException {
-        library.checkOutBook("unavailable", "unavailable", 0);
+        Book unavailableBook = new Book("unavailable", "unavailable", 0);
+        library.checkOutBook(unavailableBook);
     }
 
     @Test
     public void testReturnBookUpdatesListOfAvailableBooks() throws BookNotAvailableException, BookNotCheckedOutException {
-        library.checkOutBook(book1.getTitle(), book1.getAuthor(), book1.getYearPublished());
-        library.checkOutBook(book2.getTitle(), book2.getAuthor(), book2.getYearPublished());
+        library.checkOutBook(book1);
+        library.checkOutBook(book2);
 
         library.returnBook(book1.getTitle(), book1.getAuthor(), book1.getYearPublished());
 
-        ArrayList<Book> bookList = new ArrayList<Book>(Arrays.asList(book1));
+        ArrayList<Book> bookList = new ArrayList<>(Arrays.asList(book1));
         Collections.sort(bookList);
 
         Assert.assertTrue(bookList.equals(library.getBooks()));
