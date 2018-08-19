@@ -40,9 +40,9 @@ public class Book implements Comparable {
         Book book = (Book) object;
 
         return (
-            this.author.equals(book.getAuthor())
+            this.author.toLowerCase().equals(book.getAuthor().toLowerCase())
             && this.yearPublished == book.getYearPublished()
-            && this.title.equals(book.getTitle())
+            && this.title.toLowerCase().equals(book.getTitle().toLowerCase())
         );
     }
 
