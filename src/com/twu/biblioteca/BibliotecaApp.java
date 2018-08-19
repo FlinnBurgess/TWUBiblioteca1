@@ -42,8 +42,10 @@ public class BibliotecaApp {
                     System.out.println("Please enter the year the book was published:");
                     yearPublished = Integer.parseInt(input.nextLine());
 
+                    Book book = new Book(title, author, yearPublished);
+
                     try {
-                        library.checkOutBook(title, author, yearPublished);
+                        library.checkOutBook(book);
                         System.out.println("Thank you! Enjoy the book");
                     } catch (BookNotAvailableException exception) {
                         System.out.println("That book is not available.");
