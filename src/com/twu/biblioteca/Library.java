@@ -5,8 +5,9 @@ import java.util.Collections;
 
 public class Library {
     private ArrayList<Book> bookList;
-    private ArrayList<Book> checkedOut = new ArrayList<Book>();
+    private ArrayList<Book> checkedOutBooks = new ArrayList<Book>();
     private ArrayList<Movie> movieList;
+    private ArrayList<Movie> checkedOutMovies = new ArrayList<Movie>();
 
     public Library(ArrayList<Book> bookList, ArrayList<Movie> movieList) {
         this.bookList = bookList;
@@ -20,7 +21,7 @@ public class Library {
 
     public void checkOutBook(Book book) throws BookNotAvailableException {
         if (bookList.contains(book)) {
-            checkedOut.add(book);
+            checkedOutBooks.add(book);
             bookList.remove(book);
         } else {
             throw new BookNotAvailableException(
@@ -31,9 +32,9 @@ public class Library {
     }
 
     public void returnBook(Book book) throws BookNotCheckedOutException {
-        if (checkedOut.contains(book)) {
+        if (checkedOutBooks.contains(book)) {
             bookList.add(book);
-            checkedOut.remove(book);
+            checkedOutBooks.remove(book);
         } else {
             throw new BookNotCheckedOutException(
                     String.format(
@@ -47,5 +48,13 @@ public class Library {
     public ArrayList<Movie> getMovies() {
         Collections.sort(movieList);
         return movieList;
+    }
+
+    public void checkOutMovie(Movie movie) {
+        if (movieList.contains(movie)) {
+            movieList.remove(movie);
+            checkedOutMovies.add(movie);
+            System.out.println("Thank you! Enjoy the movie");
+        }
     }
 }
