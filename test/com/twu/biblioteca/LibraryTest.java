@@ -68,4 +68,14 @@ public class LibraryTest {
     public void testReturnNonCheckedOutBookThrowsException() throws BookNotCheckedOutException {
         library.returnBook(book1);
     }
+
+    @Test
+    public void testCheckoutMovieUpdatesListOfAvailableMovies() {
+        library.checkOutMovie(movie1);
+
+        ArrayList<Movie> expectedMovieList = new ArrayList<>();
+        expectedMovieList.add(movie2);
+
+        Assert.assertTrue(expectedMovieList.equals(library.getMovies()));
+    }
 }
