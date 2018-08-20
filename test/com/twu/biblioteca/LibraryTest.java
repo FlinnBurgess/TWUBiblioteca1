@@ -13,6 +13,8 @@ public class LibraryTest {
     private Library library;
     private Book book1;
     private Book book2;
+    private Movie movie1;
+    private Movie movie2;
 
     @Before
     public void setUp(){
@@ -20,7 +22,11 @@ public class LibraryTest {
         book2 = new Book("title2", "author2", 2000);
         ArrayList<Book> bookList = new ArrayList<>(Arrays.asList(book1, book2));
 
-        library = new Library(bookList);
+        movie1 = new Movie("movie1", 2000, "director1", 5);
+        movie2 = new Movie("movie2", 2000, "director2", 5);
+        ArrayList<Movie> movieList = new ArrayList<>(Arrays.asList(movie1, movie2));
+
+        library = new Library(bookList, movieList);
     }
 
     @Test

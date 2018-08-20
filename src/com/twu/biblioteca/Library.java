@@ -6,9 +6,11 @@ import java.util.Collections;
 public class Library {
     private ArrayList<Book> bookList;
     private ArrayList<Book> checkedOut = new ArrayList<Book>();
+    private ArrayList<Movie> movieList;
 
-    public Library(ArrayList<Book> bookList) {
+    public Library(ArrayList<Book> bookList, ArrayList<Movie> movieList) {
         this.bookList = bookList;
+        this.movieList = movieList;
     }
 
     public ArrayList<Book> getBooks() {
