@@ -8,16 +8,16 @@ public class BibliotecaApp {
 
     public static void main(String[] args) {
         Library library = createGenericLibrary();
+        ArrayList<String> menuOptions = new ArrayList<>(Arrays.asList("List Books", "Checkout Book", "Return Book", "List Movies", "Checkout movie", "Quit"));
+        Scanner input = new Scanner(System.in);
 
         System.out.println("Welcome to the Biblioteca library system!");
-        ArrayList<String> menuOptions = new ArrayList<>(Arrays.asList("List Books", "Checkout Book", "Return Book", "List Movies", "Quit"));
 
         System.out.println("To use the system, please type one of the following commands: ");
         for (String option : menuOptions) {
             System.out.println(option);
         }
 
-        Scanner input = new Scanner(System.in);
         String command = input.nextLine().toLowerCase();
 
         while (!command.equals("quit")) {
@@ -66,6 +66,11 @@ public class BibliotecaApp {
                     }
 
                     break;
+                case "checkout movie":
+                    Movie movieToCheckout = generateMovieFromUserInput(input);
+                    library.checkOutMovie(movieToCheckout);
+
+                    break;
                 default:
                     System.out.println("Please enter a valid command!");
                     for (String option : menuOptions) {
@@ -101,5 +106,16 @@ public class BibliotecaApp {
         int yearPublished = Integer.parseInt(input.nextLine());
 
         return new Book(title, author, yearPublished);
+    }
+
+    private static Movie generateMovieFromUserInput(Scanner input) {
+        System.out.println("Please enter the name of the movie:");
+        String name = input.nextLine();
+        System.out.println("Please enter the year of release:");
+        int year = Integer.parseInt(input.nextLine());
+        System.out.println("Please enter the director of the movie:");
+        String author = input.nextLine();
+
+        return new Movie(name, year, author);
     }
 }
