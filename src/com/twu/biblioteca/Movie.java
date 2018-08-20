@@ -1,6 +1,6 @@
 package com.twu.biblioteca;
 
-public class Movie {
+public class Movie implements Comparable {
     private String name;
     private int year;
     private String director;
@@ -54,5 +54,12 @@ public class Movie {
                 && year == movie.getYear()
                 && director.toLowerCase().equals(movie.getDirector().toLowerCase())
         );
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Movie movie = (Movie) o;
+
+        return this.name.compareTo(movie.getName());
     }
 }
