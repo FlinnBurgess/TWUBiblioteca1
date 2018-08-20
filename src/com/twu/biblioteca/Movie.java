@@ -13,6 +13,12 @@ public class Movie implements Comparable {
         this.rating = rating;
     }
 
+    public Movie(String name, int year, String director) {
+        this.name = name;
+        this.year = year;
+        this.director = director;
+    }
+
     public String getName() {
         return name;
     }
