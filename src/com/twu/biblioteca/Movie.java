@@ -17,6 +17,7 @@ public class Movie implements Comparable {
         this.name = name;
         this.year = year;
         this.director = director;
+        this.rating = -1;
     }
 
     public String getName() {
@@ -41,6 +42,10 @@ public class Movie implements Comparable {
 
     public void setDirector(String director) {
         this.director = director;
+    }
+
+    public boolean hasRating() {
+        return (rating >= 0) ? true : false;
     }
 
     public int getRating() {
