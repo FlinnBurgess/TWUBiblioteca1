@@ -43,4 +43,9 @@ public class Library {
             );
         }
     }
+
+    public ArrayList<Movie> getMovies() {
+        Collections.sort(movieList);
+        return movieList;
+    }
 }

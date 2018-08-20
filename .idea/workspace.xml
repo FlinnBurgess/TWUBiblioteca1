@@ -4,7 +4,6 @@
     <list default="true" id="71ee3bac-052a-4808-9de3-9e53b633604c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Library.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Library.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Movie.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Movie.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,7 +39,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Movie.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Movie.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Movie.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="550">
@@ -79,7 +78,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Library.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Library.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Library.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
@@ -480,7 +479,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1534516162491</updated>
-      <workItem from="1534516163610" duration="33846000" />
+      <workItem from="1534516163610" duration="33882000" />
     </task>
     <task id="LOCAL-00001" summary="Added welcome message on initial launch of app">
       <created>1534518217521</created>
@@ -755,7 +754,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534769607317</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Movie now implements Comparable so that it can be sorted in the Library">
+      <created>1534770104568</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1534770104568</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -791,7 +797,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33846000" />
+    <option name="totallyTimeSpent" value="33882000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -835,7 +841,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added test that returning a book updates the available books list" />
     <MESSAGE value="Made Book implement Comparable so it could be ordered" />
     <MESSAGE value="Book list is now returned from the library sorted by title" />
     <MESSAGE value="Added code to sort generated book lists before comparison in test cases" />
@@ -860,7 +865,8 @@
     <MESSAGE value="Refactored duplicate code into its own method" />
     <MESSAGE value="Added test for verifying list of available movies is updated on checkout of movie" />
     <MESSAGE value="Library class constructor now takes movie list" />
-    <option name="LAST_COMMIT_MESSAGE" value="Library class constructor now takes movie list" />
+    <MESSAGE value="Movie now implements Comparable so that it can be sorted in the Library" />
+    <option name="LAST_COMMIT_MESSAGE" value="Movie now implements Comparable so that it can be sorted in the Library" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -964,27 +970,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/LibraryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-521">
-          <caret line="28" column="48" lean-forward="false" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Library.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="47" column="33" lean-forward="false" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#203#209#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Book.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
@@ -1027,6 +1012,27 @@
             <element signature="e#831#832#0" expanded="true" />
             <element signature="e#872#873#0" expanded="true" />
             <element signature="e#908#909#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/LibraryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-521">
+          <caret line="28" column="48" lean-forward="false" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Library.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="47" column="33" lean-forward="false" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#203#209#0" expanded="true" />
           </folding>
         </state>
       </provider>
