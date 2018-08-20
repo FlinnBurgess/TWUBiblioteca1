@@ -10,7 +10,7 @@ public class BibliotecaApp {
         Library library = createGenericLibrary();
 
         System.out.println("Welcome to the Biblioteca library system!");
-        ArrayList<String> menuOptions = new ArrayList<>(Arrays.asList("List Books", "Checkout Book", "Return Book", "Quit"));
+        ArrayList<String> menuOptions = new ArrayList<>(Arrays.asList("List Books", "Checkout Book", "Return Book", "List Movies", "Quit"));
 
         System.out.println("To use the system, please type one of the following commands: ");
         for (String option : menuOptions) {
@@ -50,6 +50,19 @@ public class BibliotecaApp {
                         System.out.println("Thank you for returning the book.");
                     } catch (BookNotCheckedOutException exception) {
                         System.out.println("That is not a valid book to return.");
+                    }
+
+                    break;
+                case "list movies":
+                    for (Movie movie : library.getMovies()) {
+                        String movieDetails = String.format("%s, %d, %s, ", movie.getName(), movie.getYear(), movie.getDirector());
+                        if (movie.hasRating()) {
+                            movieDetails +=  movie.getRating();
+                        } else {
+                            movieDetails += "unrated";
+                        }
+
+                        System.out.println(movieDetails);
                     }
 
                     break;
