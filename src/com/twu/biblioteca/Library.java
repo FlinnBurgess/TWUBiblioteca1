@@ -37,7 +37,7 @@ public class Library {
         }
     }
 
-    public void returnBook(Book book) throws BookNotCheckedOutException {
+    public void returnBook(Book book, String userId) throws BookNotCheckedOutException {
         if (checkedOutBooks.contains(book)) {
             bookList.add(book);
             checkedOutBooks.remove(book);

@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="71ee3bac-052a-4808-9de3-9e53b633604c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/LibraryTest.java" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/LibraryTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Library.java" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Library.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,7 +68,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LibraryTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LibraryTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/LibraryTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="465">
@@ -80,15 +80,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Library.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Library.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Library.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+            <state relative-caret-position="414">
+              <caret line="39" column="50" lean-forward="false" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2331#2332#0" expanded="true" />
-                <element signature="e#2388#2389#0" expanded="true" />
+                <element signature="e#2346#2347#0" expanded="true" />
+                <element signature="e#2403#2404#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -158,8 +158,8 @@
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/MovieTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Movie.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" />
-        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Library.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/LibraryTest.java" />
+        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Library.java" />
       </list>
     </option>
   </component>
@@ -482,14 +482,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1534516162491</updated>
-      <workItem from="1534516163610" duration="40512000" />
-    </task>
-    <task id="LOCAL-00005" summary="Added Library class and method for getting book list.">
-      <created>1534590774681</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1534590774681</updated>
+      <workItem from="1534516163610" duration="40581000" />
     </task>
     <task id="LOCAL-00006" summary="Added assertion to test case to compare differing booklists">
       <created>1534590833053</created>
@@ -827,7 +820,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534852568278</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Updated test instances of returnBook to take a user id argument">
+      <created>1534852625583</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1534852625583</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -863,7 +863,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40512000" />
+    <option name="totallyTimeSpent" value="40581000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -907,7 +907,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added test for overriden equality method of movie" />
     <MESSAGE value="Added test for overridden equality method of movie" />
     <MESSAGE value="Added movie class with overridden equals method" />
     <MESSAGE value="added assertion to MovieTest to test inequal objects and renamed variables to be clearer" />
@@ -932,7 +931,8 @@
     <MESSAGE value="Updated uses of checkoutBook in tests to include user id argument" />
     <MESSAGE value="Added basic implementation of getCheckedOutBooks to Library class" />
     <MESSAGE value="Checked out books are now associated with a user" />
-    <option name="LAST_COMMIT_MESSAGE" value="Checked out books are now associated with a user" />
+    <MESSAGE value="Updated test instances of returnBook to take a user id argument" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated test instances of returnBook to take a user id argument" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1084,24 +1084,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Library.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2331#2332#0" expanded="true" />
-            <element signature="e#2388#2389#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/LibraryTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="86" column="39" lean-forward="false" selection-start-line="86" selection-start-column="39" selection-end-line="86" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Library.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="39" column="50" lean-forward="false" selection-start-line="39" selection-start-column="50" selection-end-line="39" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2346#2347#0" expanded="true" />
+            <element signature="e#2403#2404#0" expanded="true" />
           </folding>
         </state>
       </provider>
