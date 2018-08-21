@@ -75,4 +75,14 @@ public class Library {
     public Customer getCustomer(String userId) {
         return customers.get(userId);
     }
+
+    public boolean userLogin(String userId, String password) {
+        if (customers.containsKey(userId) && password.equals(customers.get(userId).getPassword())) {
+            System.out.println("Login successful!");
+            return true;
+        }
+
+        System.out.println("Customer ID or password incorrect, please try again.");
+        return false;
+    }
 }
