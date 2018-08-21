@@ -7,9 +7,9 @@ public class CustomerTest {
 
     @Test
     public void testGetCustomerDetailsReturnsExpectedMessage() {
-        Customer customer = new Customer("name", "email@address.com", 12345678910, "password", "1234567");
+        Customer customer = new Customer("name", "email@address.com", "01234 567 890", "password", "1234567");
 
-        String expectedMessage = "name, email@address.com, 12345678910";
+        String expectedMessage = "name, email@address.com, 01234 567 890";
 
         Assert.assertTrue(expectedMessage.equals(customer.getDetails()));
     }
