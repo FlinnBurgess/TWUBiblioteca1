@@ -2,12 +2,14 @@ package com.twu.biblioteca;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 
 public class Library {
     private ArrayList<Book> bookList;
     private ArrayList<Book> checkedOutBooks = new ArrayList<>();
     private ArrayList<Movie> movieList;
     private ArrayList<Movie> checkedOutMovies = new ArrayList<>();
+    private HashMap<String, ArrayList<Book>> checkedOutBooksHashmap = new HashMap<>();
 
     public Library(ArrayList<Book> bookList, ArrayList<Movie> movieList) {
         this.bookList = bookList;
@@ -21,7 +23,11 @@ public class Library {
 
     public void checkOutBook(Book book, String userId) throws BookNotAvailableException {
         if (bookList.contains(book)) {
-            checkedOutBooks.add(book);
+            if (!checkedOutBooksHashmap.containsKey(userId)) {
+                checkedOutBooksHashmap.put(userId, new ArrayList<>());
+            }
+
+            checkedOutBooksHashmap.get(userId).add(book);
             bookList.remove(book);
         } else {
             throw new BookNotAvailableException(
@@ -59,6 +65,6 @@ public class Library {
     }
 
     public ArrayList<Book> getCheckedOutBooks(String userId) {
-        return null;
+        return checkedOutBooksHashmap.get(userId);
     }
 }
