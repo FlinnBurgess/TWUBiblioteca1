@@ -29,6 +29,8 @@ public class LibraryTest {
 
         library = new Library(bookList, movieList);
         userId = "123-4567";
+
+        library.addCustomer(new Customer("name", "email@address.com", "01234 567 890", "123-4567", "password"));
     }
 
     @Test
@@ -95,5 +97,14 @@ public class LibraryTest {
         expectedMovieList.add(movie2);
 
         Assert.assertTrue(expectedMovieList.equals(library.getMovies()));
+    }
+
+    @Test
+    public void testUserLoginCorrectlyValidatesUserCredentials() {
+        Assert.assertTrue(library.userLogin(userId, "password"));
+
+        Assert.assertFalse(library.userLogin("incorrect id", "password"));
+
+        Assert.assertFalse(library.userLogin(userId, "incorrect password"));
     }
 }
