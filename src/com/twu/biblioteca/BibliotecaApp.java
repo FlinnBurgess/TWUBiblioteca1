@@ -35,7 +35,7 @@ public class BibliotecaApp {
                     Book bookToCheckout = generateBookFromUserInput(input);
 
                     try {
-                        library.checkOutBook(bookToCheckout);
+                        library.checkOutBook(bookToCheckout, "123-4567");
                         System.out.println("Thank you! Enjoy the book");
                     } catch (BookNotAvailableException exception) {
                         System.out.println("That book is not available.");

@@ -5,9 +5,9 @@ import java.util.Collections;
 
 public class Library {
     private ArrayList<Book> bookList;
-    private ArrayList<Book> checkedOutBooks = new ArrayList<Book>();
+    private ArrayList<Book> checkedOutBooks = new ArrayList<>();
     private ArrayList<Movie> movieList;
-    private ArrayList<Movie> checkedOutMovies = new ArrayList<Movie>();
+    private ArrayList<Movie> checkedOutMovies = new ArrayList<>();
 
     public Library(ArrayList<Book> bookList, ArrayList<Movie> movieList) {
         this.bookList = bookList;
@@ -56,5 +56,9 @@ public class Library {
             checkedOutMovies.add(movie);
             System.out.println("Thank you! Enjoy the movie");
         }
+    }
+
+    public ArrayList<Book> getCheckedOutBooks(String userId) {
+        return null;
     }
 }
