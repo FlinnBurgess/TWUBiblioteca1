@@ -5,13 +5,27 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class BibliotecaApp {
+    private static String currentUser;
 
     public static void main(String[] args) {
         Library library = createGenericLibrary();
+        library.addCustomer(new Customer("name", "email@address.com", "01234 567 890", "123-4567", "password"));
         ArrayList<String> menuOptions = new ArrayList<>(Arrays.asList("List Books", "Checkout Book", "Return Book", "List Movies", "Checkout movie", "Quit"));
         Scanner input = new Scanner(System.in);
 
         System.out.println("Welcome to the Biblioteca library system!");
+
+        boolean loggedIn = false;
+
+        while (!loggedIn) {
+            System.out.println("Please enter your customer id:");
+            currentUser = input.nextLine();
+
+            System.out.println("Please enter your password:");
+            String password = input.nextLine();
+
+            loggedIn = library.userLogin(currentUser, password);
+        }
 
         System.out.println("To use the system, please type one of the following commands: ");
         for (String option : menuOptions) {
@@ -35,7 +49,7 @@ public class BibliotecaApp {
                     Book bookToCheckout = generateBookFromUserInput(input);
 
                     try {
-                        library.checkOutBook(bookToCheckout, "123-4567");
+                        library.checkOutBook(bookToCheckout, currentUser);
                         System.out.println("Thank you! Enjoy the book");
                     } catch (BookNotAvailableException exception) {
                         System.out.println("That book is not available.");
@@ -46,7 +60,7 @@ public class BibliotecaApp {
                     Book bookToReturn = generateBookFromUserInput(input);
 
                     try {
-                        library.returnBook(bookToReturn, "123-4567");
+                        library.returnBook(bookToReturn, currentUser);
                         System.out.println("Thank you for returning the book.");
                     } catch (BookNotCheckedOutException exception) {
                         System.out.println("That is not a valid book to return.");
