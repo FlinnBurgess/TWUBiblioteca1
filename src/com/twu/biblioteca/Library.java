@@ -19,7 +19,7 @@ public class Library {
         return bookList;
     }
 
-    public void checkOutBook(Book book) throws BookNotAvailableException {
+    public void checkOutBook(Book book, String userId) throws BookNotAvailableException {
         if (bookList.contains(book)) {
             checkedOutBooks.add(book);
             bookList.remove(book);
