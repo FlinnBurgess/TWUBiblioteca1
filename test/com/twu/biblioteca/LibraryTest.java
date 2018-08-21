@@ -42,13 +42,24 @@ public class LibraryTest {
     }
 
     @Test
-    public void testCheckoutRemovesBookFromAvailableBooks() throws BookNotAvailableException {
+    public void testCheckoutBookRemovesBookFromAvailableBooks() throws BookNotAvailableException {
         library.checkOutBook(book1);
 
         ArrayList<Book> bookList = new ArrayList<>(Arrays.asList(book2));
         Collections.sort(bookList);
 
         Assert.assertTrue(bookList.equals(library.getBooks()));
+    }
+
+    @Test
+    public void testCheckoutBookAssignsBookToCorrectUser() throws BookNotAvailableException {
+        String userId = "123-4567";
+        library.checkOutBook(book1, userId);
+
+        ArrayList<Book> expectedUserBooks = new ArrayList<>();
+        expectedUserBooks.add(book1);
+
+        Assert.assertTrue(expectedUserBooks.equals(library.getCheckedOutBooks(userId)));
     }
 
     @Test(expected = BookNotAvailableException.class)
