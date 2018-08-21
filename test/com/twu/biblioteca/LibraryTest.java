@@ -15,6 +15,7 @@ public class LibraryTest {
     private Book book2;
     private Movie movie1;
     private Movie movie2;
+    private String userId;
 
     @Before
     public void setUp(){
@@ -27,6 +28,7 @@ public class LibraryTest {
         ArrayList<Movie> movieList = new ArrayList<>(Arrays.asList(movie1, movie2));
 
         library = new Library(bookList, movieList);
+        userId = "123-4567";
     }
 
     @Test
@@ -43,7 +45,7 @@ public class LibraryTest {
 
     @Test
     public void testCheckoutBookRemovesBookFromAvailableBooks() throws BookNotAvailableException {
-        library.checkOutBook(book1);
+        library.checkOutBook(book1, userId);
 
         ArrayList<Book> bookList = new ArrayList<>(Arrays.asList(book2));
         Collections.sort(bookList);
@@ -53,7 +55,6 @@ public class LibraryTest {
 
     @Test
     public void testCheckoutBookAssignsBookToCorrectUser() throws BookNotAvailableException {
-        String userId = "123-4567";
         library.checkOutBook(book1, userId);
 
         ArrayList<Book> expectedUserBooks = new ArrayList<>();
@@ -65,13 +66,13 @@ public class LibraryTest {
     @Test(expected = BookNotAvailableException.class)
     public void testCheckoutThrowsExceptionOnUnavailableBook() throws BookNotAvailableException {
         Book unavailableBook = new Book("unavailable", "unavailable", 0);
-        library.checkOutBook(unavailableBook);
+        library.checkOutBook(unavailableBook, userId);
     }
 
     @Test
     public void testReturnBookUpdatesListOfAvailableBooks() throws BookNotAvailableException, BookNotCheckedOutException {
-        library.checkOutBook(book1);
-        library.checkOutBook(book2);
+        library.checkOutBook(book1, userId);
+        library.checkOutBook(book2, userId);
 
         library.returnBook(book1);
 
