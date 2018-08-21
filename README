@@ -1,2 +1,2 @@
-My implementation of the first release biblioteca code.
+My implementation of the biblioteca app.
 To run the app, you can either manually compile the java files and run the app from the BibliotecaApp.class file, or you can open the project in the IntelliJ IDE and run it from there.
