@@ -74,7 +74,7 @@ public class LibraryTest {
         library.checkOutBook(book1, userId);
         library.checkOutBook(book2, userId);
 
-        library.returnBook(book1);
+        library.returnBook(book1, userId);
 
         ArrayList<Book> bookList = new ArrayList<>(Arrays.asList(book1));
         Collections.sort(bookList);
@@ -84,7 +84,7 @@ public class LibraryTest {
 
     @Test(expected = BookNotCheckedOutException.class)
     public void testReturnNonCheckedOutBookThrowsException() throws BookNotCheckedOutException {
-        library.returnBook(book1);
+        library.returnBook(book1, userId);
     }
 
     @Test
