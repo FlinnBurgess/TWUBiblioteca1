@@ -9,7 +9,6 @@ public class BibliotecaApp {
 
     public static void main(String[] args) {
         Library library = createGenericLibrary();
-        library.addCustomer(new Customer("name", "email@address.com", "01234 567 890", "123-4567", "password"));
         ArrayList<String> menuOptions = new ArrayList<>(Arrays.asList("List Books", "Checkout Book", "Return Book", "List Movies", "Checkout movie", "My details", "Quit"));
         Scanner input = new Scanner(System.in);
 
@@ -111,7 +110,10 @@ public class BibliotecaApp {
         Movie movie2 = new Movie("Movie 2", 2002, "Director 2");
         ArrayList<Movie> movieList = new ArrayList<>(Arrays.asList(movie1, movie2));
 
-        return new Library(bookList, movieList);
+        Library library = new Library(bookList, movieList);
+        library.addCustomer(new Customer("name", "email@address.com", "01234 567 890", "123-4567", "password"));
+
+        return library;
     }
 
     private static Book generateBookFromUserInput(Scanner input) {
