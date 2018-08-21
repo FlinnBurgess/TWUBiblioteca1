@@ -18,4 +18,12 @@ public class Customer {
     public String getDetails() {
         return String.format("%s, %s, %s", name, emailAddress, phoneNumber);
     }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 }

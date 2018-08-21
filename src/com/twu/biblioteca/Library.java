@@ -9,6 +9,7 @@ public class Library {
     private ArrayList<Movie> movieList;
     private ArrayList<Movie> checkedOutMovies = new ArrayList<>();
     private HashMap<String, ArrayList<Book>> checkedOutBooks= new HashMap<>();
+    private HashMap<String, Customer> customers = new HashMap<>();
 
     public Library(ArrayList<Book> bookList, ArrayList<Movie> movieList) {
         this.bookList = bookList;
@@ -65,5 +66,13 @@ public class Library {
 
     public ArrayList<Book> getCheckedOutBooks(String userId) {
         return checkedOutBooks.get(userId);
+    }
+
+    public void addCustomer(Customer customer) {
+        customers.put(customer.getUserId(), customer);
+    }
+
+    public Customer getCustomer(String userId) {
+        return customers.get(userId);
     }
 }
