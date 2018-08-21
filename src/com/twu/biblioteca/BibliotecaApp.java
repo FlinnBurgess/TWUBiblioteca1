@@ -10,7 +10,7 @@ public class BibliotecaApp {
     public static void main(String[] args) {
         Library library = createGenericLibrary();
         library.addCustomer(new Customer("name", "email@address.com", "01234 567 890", "123-4567", "password"));
-        ArrayList<String> menuOptions = new ArrayList<>(Arrays.asList("List Books", "Checkout Book", "Return Book", "List Movies", "Checkout movie", "Quit"));
+        ArrayList<String> menuOptions = new ArrayList<>(Arrays.asList("List Books", "Checkout Book", "Return Book", "List Movies", "Checkout movie", "My details", "Quit"));
         Scanner input = new Scanner(System.in);
 
         System.out.println("Welcome to the Biblioteca library system!");
@@ -84,6 +84,9 @@ public class BibliotecaApp {
                     Movie movieToCheckout = generateMovieFromUserInput(input);
                     library.checkOutMovie(movieToCheckout);
 
+                    break;
+                case "my details":
+                    System.out.println(library.getCustomer(currentUser).getDetails());
                     break;
                 default:
                     System.out.println("Please enter a valid command!");

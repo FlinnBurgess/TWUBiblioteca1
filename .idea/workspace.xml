@@ -18,8 +18,8 @@
       <file leaf-file-name="BibliotecaApp.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="1632">
+              <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -210,7 +210,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LibraryTest.testUserLoginCorrectlyValidatesUserCredentials">
+  <component name="RunManager" selected="Application.BibliotecaApp">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -420,11 +420,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.LibraryTest.testUserLoginCorrectlyValidatesUserCredentials" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.CustomerTest.testGetCustomerDetailsReturnsExpectedMessage" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.LibraryTest.testReturnBookUpdatesListOfAvailableBooks" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.LibraryTest.testCheckoutBookAssignsBookToCorrectUser" />
-        <item index="4" class="java.lang.String" itemvalue="Application.BibliotecaApp" />
+        <item index="0" class="java.lang.String" itemvalue="Application.BibliotecaApp" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.LibraryTest.testUserLoginCorrectlyValidatesUserCredentials" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CustomerTest.testGetCustomerDetailsReturnsExpectedMessage" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.LibraryTest.testReturnBookUpdatesListOfAvailableBooks" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.LibraryTest.testCheckoutBookAssignsBookToCorrectUser" />
       </list>
     </recent_temporary>
   </component>
@@ -441,14 +441,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1534516162491</updated>
-      <workItem from="1534516163610" duration="43547000" />
-    </task>
-    <task id="LOCAL-00014" summary="checkout method now throws exception on unavailable books">
-      <created>1534616164175</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1534616164175</updated>
+      <workItem from="1534516163610" duration="43812000" />
     </task>
     <task id="LOCAL-00015" summary="Added test that returning a book updates the available books list">
       <created>1534619799773</created>
@@ -786,7 +779,14 @@
       <option name="project" value="LOCAL" />
       <updated>1534855041926</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="User now has to login before they can use the app">
+      <created>1534855659232</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1534855659232</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -822,7 +822,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43547000" />
+    <option name="totallyTimeSpent" value="43812000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -897,7 +897,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactored duplicate code into its own method" />
     <MESSAGE value="Added test for verifying list of available movies is updated on checkout of movie" />
     <MESSAGE value="Library class constructor now takes movie list" />
     <MESSAGE value="Movie now implements Comparable so that it can be sorted in the Library" />
@@ -922,7 +921,8 @@
     <MESSAGE value="Library now stores a list of customers, and has methods for adding and retrieving customer data" />
     <MESSAGE value="Added test for checking that users logging in are correctly validated" />
     <MESSAGE value="Added userLogin method to Library class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added userLogin method to Library class" />
+    <MESSAGE value="User now has to login before they can use the app" />
+    <option name="LAST_COMMIT_MESSAGE" value="User now has to login before they can use the app" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1117,8 +1117,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="1632">
+          <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
