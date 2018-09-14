@@ -95,7 +95,7 @@ public class LibraryTest {
 
     @Test
     public void testCheckoutMovieUpdatesListOfAvailableMovies() throws ItemNotAvailableException {
-        library.checkOutMovie(movie1);
+        library.checkOutMovie(movie1, userId);
 
         ArrayList<Movie> expectedMovieList = new ArrayList<>();
         expectedMovieList.add(movie2);

@@ -92,7 +92,7 @@ public class UserInterface {
             case "checkout movie":
                 Movie movieToCheckout = generateMovieFromUserInput();
                 try {
-                    library.checkOutMovie(movieToCheckout);
+                    library.checkOutMovie(movieToCheckout, currentUser);
                 } catch (ItemNotAvailableException e) {
                     System.out.println("That movie is not available.");
                 }
