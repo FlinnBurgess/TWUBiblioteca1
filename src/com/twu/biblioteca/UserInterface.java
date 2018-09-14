@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class UserInterface {
-    private ArrayList<String> options = new ArrayList<>(Arrays.asList("List Books", "Checkout Book", "Return Book", "List Movies", "Checkout movie", "My details", "Quit"));
+    private ArrayList<String> options = new ArrayList<>(Arrays.asList("List Books", "Checkout Book", "Return Book", "List Movies", "Checkout movie", "Return movie", "My details", "Quit"));
     private Library library;
     private String currentUser;
     private Scanner input = new Scanner(System.in);
@@ -95,6 +95,16 @@ public class UserInterface {
                     library.checkOutMovie(movieToCheckout, currentUser);
                 } catch (ItemNotAvailableException e) {
                     System.out.println("That movie is not available.");
+                }
+
+                break;
+            case "return movie":
+                Movie movieToReturn = generateMovieFromUserInput();
+                try {
+                    library.returnMovie(movieToReturn, currentUser);
+                    System.out.println("Thank you for returning the movie.");
+                } catch (ItemNotCheckedOutException e) {
+                    System.out.println("That movie is not checked out.");
                 }
 
                 break;

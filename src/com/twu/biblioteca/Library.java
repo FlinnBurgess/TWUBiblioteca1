@@ -58,12 +58,13 @@ class Library {
 
     void checkOutMovie(Movie movie, String userId) throws ItemNotAvailableException {
         if (movieList.contains(movie)) {
-            movieList.remove(movie);
             if (!checkedOutMovies.containsKey(userId)) {
                 checkedOutMovies.put(userId, new ArrayList<Movie>());
             }
 
-            checkedOutMovies.get(userId).add(movie);
+            checkedOutMovies.get(userId).add(movieList.get(movieList.indexOf(movie)));
+            movieList.remove(movie);
+
             System.out.println("Thank you! Enjoy the movie");
         } else {
             throw new ItemNotAvailableException(
