@@ -39,6 +39,10 @@ public class Movie implements Comparable {
 
     @Override
     public boolean equals(Object o) {
+        if (getClass() != o.getClass()) {
+            return false;
+        }
+
         Movie movie = (Movie) o;
 
         return (

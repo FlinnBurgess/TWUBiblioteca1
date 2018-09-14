@@ -26,6 +26,8 @@ public class Book implements Comparable {
 
     @Override
     public boolean equals(Object object) {
+        if (getClass() != object.getClass()) {return false;}
+
         Book book = (Book) object;
 
         return (
