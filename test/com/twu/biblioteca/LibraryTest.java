@@ -76,7 +76,7 @@ public class LibraryTest {
     }
 
     @Test
-    public void testReturnBookUpdatesListOfAvailableBooks() throws ItemNotAvailableException, BookNotCheckedOutException {
+    public void testReturnBookUpdatesListOfAvailableBooks() throws ItemNotAvailableException, ItemNotCheckedOutException {
         library.checkOutBook(book1, userId);
         library.checkOutBook(book2, userId);
 
@@ -88,8 +88,8 @@ public class LibraryTest {
         Assert.assertTrue(bookList.equals(library.getBooks()));
     }
 
-    @Test(expected = BookNotCheckedOutException.class)
-    public void testReturnNonCheckedOutBookThrowsException() throws BookNotCheckedOutException {
+    @Test(expected = ItemNotCheckedOutException.class)
+    public void testReturnNonCheckedOutBookThrowsException() throws ItemNotCheckedOutException {
         library.returnBook(book1, userId);
     }
 

@@ -71,7 +71,7 @@ public class UserInterface {
                 try {
                     library.returnBook(bookToReturn, currentUser);
                     System.out.println("Thank you for returning the book.");
-                } catch (BookNotCheckedOutException exception) {
+                } catch (ItemNotCheckedOutException exception) {
                     System.out.println("That is not a valid book to return.");
                 }
 
