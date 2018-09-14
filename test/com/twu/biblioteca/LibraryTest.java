@@ -50,7 +50,7 @@ public class LibraryTest {
     }
 
     @Test
-    public void testCheckoutBookRemovesBookFromAvailableBooks() throws BookNotAvailableException {
+    public void testCheckoutBookRemovesBookFromAvailableBooks() throws ItemNotAvailableException {
         library.checkOutBook(book1, userId);
 
         ArrayList<Book> bookList = new ArrayList<>(Arrays.asList(book2));
@@ -60,7 +60,7 @@ public class LibraryTest {
     }
 
     @Test
-    public void testCheckoutBookAssignsBookToCorrectUser() throws BookNotAvailableException {
+    public void testCheckoutBookAssignsBookToCorrectUser() throws ItemNotAvailableException {
         library.checkOutBook(book1, userId);
 
         ArrayList<Book> expectedUserBooks = new ArrayList<>();
@@ -69,14 +69,14 @@ public class LibraryTest {
         Assert.assertTrue(expectedUserBooks.equals(library.getCheckedOutBooks(userId)));
     }
 
-    @Test(expected = BookNotAvailableException.class)
-    public void testCheckoutThrowsExceptionOnUnavailableBook() throws BookNotAvailableException {
+    @Test(expected = ItemNotAvailableException.class)
+    public void testCheckoutBookThrowsExceptionOnUnavailableBook() throws ItemNotAvailableException {
         Book unavailableBook = new Book("unavailable", "unavailable", 0);
         library.checkOutBook(unavailableBook, userId);
     }
 
     @Test
-    public void testReturnBookUpdatesListOfAvailableBooks() throws BookNotAvailableException, BookNotCheckedOutException {
+    public void testReturnBookUpdatesListOfAvailableBooks() throws ItemNotAvailableException, BookNotCheckedOutException {
         library.checkOutBook(book1, userId);
         library.checkOutBook(book2, userId);
 
@@ -94,7 +94,7 @@ public class LibraryTest {
     }
 
     @Test
-    public void testCheckoutMovieUpdatesListOfAvailableMovies() {
+    public void testCheckoutMovieUpdatesListOfAvailableMovies() throws ItemNotAvailableException {
         library.checkOutMovie(movie1);
 
         ArrayList<Movie> expectedMovieList = new ArrayList<>();

@@ -21,7 +21,7 @@ public class Library {
         return bookList;
     }
 
-    public void checkOutBook(Book book, String userId) throws BookNotAvailableException {
+    public void checkOutBook(Book book, String userId) throws ItemNotAvailableException {
         if (bookList.contains(book)) {
             if (!checkedOutBooks.containsKey(userId)) {
                 checkedOutBooks.put(userId, new ArrayList<>());
@@ -30,7 +30,7 @@ public class Library {
             checkedOutBooks.get(userId).add(book);
             bookList.remove(book);
         } else {
-            throw new BookNotAvailableException(
+            throw new ItemNotAvailableException(
                     "Book with title: " + book.getTitle() + ", author: " + book.getAuthor()
                             + " and date published: " + book.getYearPublished() + " not found"
             );
@@ -56,11 +56,18 @@ public class Library {
         return movieList;
     }
 
-    public void checkOutMovie(Movie movie) {
+    public void checkOutMovie(Movie movie) throws ItemNotAvailableException {
         if (movieList.contains(movie)) {
             movieList.remove(movie);
             checkedOutMovies.add(movie);
             System.out.println("Thank you! Enjoy the movie");
+        } else {
+            throw new ItemNotAvailableException(
+                String.format(
+                        "Movie with name: %s, year: %d, and director: %s not found",
+                        movie.getName(), movie.getYear(), movie.getRating()
+                )
+            );
         }
     }
 

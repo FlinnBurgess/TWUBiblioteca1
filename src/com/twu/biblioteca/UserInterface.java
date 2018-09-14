@@ -60,7 +60,7 @@ public class UserInterface {
                 try {
                     library.checkOutBook(bookToCheckout, currentUser);
                     System.out.println("Thank you! Enjoy the book");
-                } catch (BookNotAvailableException exception) {
+                } catch (ItemNotAvailableException exception) {
                     System.out.println("That book is not available.");
                 }
 
