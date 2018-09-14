@@ -4,24 +4,24 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 
-public class Library {
+class Library {
     private ArrayList<Book> bookList;
     private ArrayList<Movie> movieList;
     private ArrayList<Movie> checkedOutMovies = new ArrayList<>();
     private HashMap<String, ArrayList<Book>> checkedOutBooks= new HashMap<>();
     private HashMap<String, Customer> customers = new HashMap<>();
 
-    public Library(ArrayList<Book> bookList, ArrayList<Movie> movieList) {
+    Library(ArrayList<Book> bookList, ArrayList<Movie> movieList) {
         this.bookList = bookList;
         this.movieList = movieList;
     }
 
-    public ArrayList<Book> getBooks() {
+    ArrayList<Book> getBooks() {
         Collections.sort(bookList);
         return bookList;
     }
 
-    public void checkOutBook(Book book, String userId) throws ItemNotAvailableException {
+    void checkOutBook(Book book, String userId) throws ItemNotAvailableException {
         if (bookList.contains(book)) {
             if (!checkedOutBooks.containsKey(userId)) {
                 checkedOutBooks.put(userId, new ArrayList<>());
@@ -37,7 +37,7 @@ public class Library {
         }
     }
 
-    public void returnBook(Book book, String userId) throws BookNotCheckedOutException {
+    void returnBook(Book book, String userId) throws BookNotCheckedOutException {
         if (checkedOutBooks.containsKey(userId) && checkedOutBooks.get(userId).contains(book)) {
             bookList.add(book);
             checkedOutBooks.get(userId).remove(book);
@@ -51,12 +51,12 @@ public class Library {
         }
     }
 
-    public ArrayList<Movie> getMovies() {
+    ArrayList<Movie> getMovies() {
         Collections.sort(movieList);
         return movieList;
     }
 
-    public void checkOutMovie(Movie movie) throws ItemNotAvailableException {
+    void checkOutMovie(Movie movie) throws ItemNotAvailableException {
         if (movieList.contains(movie)) {
             movieList.remove(movie);
             checkedOutMovies.add(movie);
@@ -71,19 +71,23 @@ public class Library {
         }
     }
 
-    public ArrayList<Book> getCheckedOutBooks(String userId) {
+    void returnMovie(Movie movie) {
+
+    }
+
+    ArrayList<Book> getCheckedOutBooks(String userId) {
         return checkedOutBooks.get(userId);
     }
 
-    public void addCustomer(Customer customer) {
+    void addCustomer(Customer customer) {
         customers.put(customer.getUserId(), customer);
     }
 
-    public Customer getCustomer(String userId) {
+    Customer getCustomer(String userId) {
         return customers.get(userId);
     }
 
-    public boolean userLogin(String userId, String password) {
+    boolean userLogin(String userId, String password) {
         if (customers.containsKey(userId) && password.equals(customers.get(userId).getPassword())) {
             System.out.println("Login successful!");
             return true;
