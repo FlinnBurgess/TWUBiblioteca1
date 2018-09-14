@@ -14,46 +14,27 @@ public class Movie implements Comparable {
     }
 
     public Movie(String name, int year, String director) {
-        this.name = name;
-        this.year = year;
-        this.director = director;
-        this.rating = -1;
+        this(name, year, director, -1);
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getYear() {
         return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
     }
 
     public String getDirector() {
         return director;
     }
 
-    public void setDirector(String director) {
-        this.director = director;
-    }
-
     public boolean hasRating() {
-        return (rating >= 0) ? true : false;
+        return rating >= 0;
     }
 
     public int getRating() {
         return rating;
-    }
-
-    public void setRating(int rating) {
-        this.rating = rating;
     }
 
     @Override
@@ -61,9 +42,9 @@ public class Movie implements Comparable {
         Movie movie = (Movie) o;
 
         return (
-                name.toLowerCase().equals(movie.getName().toLowerCase())
-                && year == movie.getYear()
-                && director.toLowerCase().equals(movie.getDirector().toLowerCase())
+            name.toLowerCase().equals(movie.getName().toLowerCase())
+            && year == movie.getYear()
+            && director.toLowerCase().equals(movie.getDirector().toLowerCase())
         );
     }
 
