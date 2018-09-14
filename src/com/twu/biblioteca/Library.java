@@ -59,7 +59,7 @@ class Library {
     void checkOutMovie(Movie movie, String userId) throws ItemNotAvailableException {
         if (movieList.contains(movie)) {
             if (!checkedOutMovies.containsKey(userId)) {
-                checkedOutMovies.put(userId, new ArrayList<Movie>());
+                checkedOutMovies.put(userId, new ArrayList<>());
             }
 
             checkedOutMovies.get(userId).add(movieList.get(movieList.indexOf(movie)));
@@ -78,8 +78,9 @@ class Library {
 
     void returnMovie(Movie movie, String userId) throws ItemNotCheckedOutException {
         if (checkedOutMovies.containsKey(userId) && checkedOutMovies.get(userId).contains(movie)) {
-            movieList.add(movie);
-            checkedOutMovies.get(userId).remove(movie);
+            ArrayList<Movie> usersCheckedOutMovies = checkedOutMovies.get(userId);
+            movieList.add(usersCheckedOutMovies.get(usersCheckedOutMovies.indexOf(movie)));
+            usersCheckedOutMovies.remove(movie);
         } else {
             throw new ItemNotCheckedOutException(
                 String.format(
