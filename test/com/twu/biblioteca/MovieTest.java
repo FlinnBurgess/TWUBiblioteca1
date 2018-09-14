@@ -14,13 +14,12 @@ public class MovieTest {
         Movie movie = createRatedMovie();
         Movie sameMovie = createRatedMovie();
 
-        Assert.assertTrue(movie.equals(sameMovie));
+        Assert.assertEquals(movie, sameMovie);
 
         Movie differentMovie = new Movie("different name", testYear, testDirector, testRating);
 
-        Assert.assertFalse(movie.equals(differentMovie));
-
-        Assert.assertFalse(movie.equals("wrong object"));
+        Assert.assertNotEquals(movie, differentMovie);
+        Assert.assertNotEquals("wrong object", movie);
     }
 
     @Test
@@ -35,20 +34,21 @@ public class MovieTest {
     @Test
     public void testGetRatingReturnsCorrectValue() {
         Movie rated = createRatedMovie();
-        Assert.assertTrue(rated.getRating() == testRating);
+        Assert.assertEquals(rated.getRating(), testRating);
 
         Movie unrated = createUnratedMovie();
-        Assert.assertTrue(unrated.getRating() == -1);
+        Assert.assertEquals(unrated.getRating(), -1);
     }
 
     @Test
     public void testMovieComparisonMethod() {
         Movie movie1 = new Movie("1", testYear, testDirector, testRating);
+        Movie movie1Duplicate = new Movie("1", testYear, testDirector, testRating);
         Movie movie2 = new Movie("2", testYear, testDirector, testRating);
 
-        Assert.assertTrue(movie1.compareTo(movie1) == 0);
-        Assert.assertTrue(movie1.compareTo(movie2) == -1);
-        Assert.assertTrue(movie2.compareTo(movie1) == 1);
+        Assert.assertEquals(0, movie1.compareTo(movie1Duplicate));
+        Assert.assertEquals(movie1.compareTo(movie2), -1);
+        Assert.assertEquals(1, movie2.compareTo(movie1));
     }
 
     private Movie createRatedMovie() {
