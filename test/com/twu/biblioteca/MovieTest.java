@@ -20,6 +20,8 @@ public class MovieTest {
         Movie differentMovie = new Movie("different name", testYear, testDirector, testRating);
 
         Assert.assertFalse(movie.equals(differentMovie));
+
+        Assert.assertFalse(movie.equals("wrong object"));
     }
 
     @Test
@@ -38,6 +40,16 @@ public class MovieTest {
 
         Movie unrated = createUnratedMovie();
         Assert.assertTrue(unrated.getRating() == -1);
+    }
+
+    @Test
+    public void testMovieComparisonMethod() {
+        Movie movie1 = new Movie("1", testYear, testDirector, testRating);
+        Movie movie2 = new Movie("2", testYear, testDirector, testRating);
+
+        Assert.assertTrue(movie1.compareTo(movie1) == 0);
+        Assert.assertTrue(movie1.compareTo(movie2) == -1);
+        Assert.assertTrue(movie2.compareTo(movie1) == 1);
     }
 
     private Movie createRatedMovie() {
