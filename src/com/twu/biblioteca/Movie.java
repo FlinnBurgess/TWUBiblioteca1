@@ -17,23 +17,23 @@ public class Movie implements Comparable {
         this(name, year, director, -1);
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
-    public int getYear() {
+    int getYear() {
         return year;
     }
 
-    public String getDirector() {
+    String getDirector() {
         return director;
     }
 
-    public boolean hasRating() {
+    boolean hasRating() {
         return rating >= 0;
     }
 
-    public int getRating() {
+    int getRating() {
         return rating;
     }
 
