@@ -38,7 +38,7 @@ public class Library {
     }
 
     public void returnBook(Book book, String userId) throws BookNotCheckedOutException {
-        if (checkedOutBooks.get(userId).contains(book)) {
+        if (checkedOutBooks.containsKey(userId) && checkedOutBooks.get(userId).contains(book)) {
             bookList.add(book);
             checkedOutBooks.get(userId).remove(book);
         } else {

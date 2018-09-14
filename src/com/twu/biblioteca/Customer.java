@@ -23,7 +23,19 @@ public class Customer {
         return userId;
     }
 
-    public String getPassword() {
+    public String getPassword()
+    {
         return password;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (!getClass().equals(o.getClass())) {
+            return false;
+        }
+
+        Customer customer = (Customer) o;
+
+        return customer.getUserId().equals(getUserId());
     }
 }

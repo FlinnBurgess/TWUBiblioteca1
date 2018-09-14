@@ -30,7 +30,11 @@ public class LibraryTest {
         library = new Library(bookList, movieList);
         userId = "123-4567";
 
-        library.addCustomer(new Customer("name", "email@address.com", "01234 567 890", "123-4567", "password"));
+        library.addCustomer(createGenericCustomer());
+    }
+
+    private Customer createGenericCustomer() {
+        return new Customer("name", "email@address.com", "01234 567 890", "123-4567", "password");
     }
 
     @Test
@@ -97,6 +101,12 @@ public class LibraryTest {
         expectedMovieList.add(movie2);
 
         Assert.assertTrue(expectedMovieList.equals(library.getMovies()));
+    }
+
+    @Test
+    public void testGetCustomerReturnsExpectedCustomer() {
+        Customer customer = createGenericCustomer();
+        Assert.assertTrue(customer.equals(library.getCustomer(userId)));
     }
 
     @Test
