@@ -3,6 +3,7 @@ package com.twu.biblioteca;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -46,6 +47,17 @@ public class LibraryTest {
 
         Assert.assertEquals(bookList, library.getBooks());
         Assert.assertNotEquals(differentBookList, library.getBooks());
+    }
+
+    @Test
+    public void testCheckoutRemovesItemsFromAvailableItems() throws ItemNotAvailableException {
+        library.checkout(book1, userId);
+        ArrayList<Book> expectedAvailableBooks = new ArrayList<>(Collections.singletonList(book2));
+        Assert.assertEquals(expectedAvailableBooks, library.getBooks());
+
+        library.checkout(movie1, userId);
+        ArrayList<Movie> expectedAvailableMovies = new ArrayList<>(Collections.singletonList(movie2));
+        Assert.assertEquals(expectedAvailableMovies, library.getMovies());
     }
 
     @Test
