@@ -15,15 +15,15 @@ public class Customer {
         this.password = password;
     }
 
-    public String getDetails() {
+    String getDetails() {
         return String.format("%s, %s, %s", name, emailAddress, phoneNumber);
     }
 
-    public String getUserId() {
+    String getUserId() {
         return userId;
     }
 
-    public String getPassword()
+    String getPassword()
     {
         return password;
     }
