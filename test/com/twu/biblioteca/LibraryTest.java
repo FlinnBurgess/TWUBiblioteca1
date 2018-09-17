@@ -45,8 +45,8 @@ public class LibraryTest {
         Collections.sort(bookList);
         Collections.sort(differentBookList);
 
-        Assert.assertTrue(bookList.equals(library.getBooks()));
-        Assert.assertFalse(differentBookList.equals(library.getBooks()));
+        Assert.assertEquals(bookList, library.getBooks());
+        Assert.assertNotEquals(differentBookList, library.getBooks());
     }
 
     @Test
@@ -56,7 +56,7 @@ public class LibraryTest {
         ArrayList<Book> bookList = new ArrayList<>(Arrays.asList(book2));
         Collections.sort(bookList);
 
-        Assert.assertTrue(bookList.equals(library.getBooks()));
+        Assert.assertEquals(bookList, library.getBooks());
     }
 
     @Test
@@ -66,7 +66,7 @@ public class LibraryTest {
         ArrayList<Book> expectedUserBooks = new ArrayList<>();
         expectedUserBooks.add(book1);
 
-        Assert.assertTrue(expectedUserBooks.equals(library.getCheckedOutBooks(userId)));
+        Assert.assertEquals(expectedUserBooks, library.getCheckedOutBooks(userId));
     }
 
     @Test(expected = ItemNotAvailableException.class)
@@ -85,7 +85,7 @@ public class LibraryTest {
         ArrayList<Book> bookList = new ArrayList<>(Arrays.asList(book1));
         Collections.sort(bookList);
 
-        Assert.assertTrue(bookList.equals(library.getBooks()));
+        Assert.assertEquals(bookList, library.getBooks());
     }
 
     @Test(expected = ItemNotCheckedOutException.class)
@@ -100,21 +100,19 @@ public class LibraryTest {
         ArrayList<Movie> expectedMovieList = new ArrayList<>();
         expectedMovieList.add(movie2);
 
-        Assert.assertTrue(expectedMovieList.equals(library.getMovies()));
+        Assert.assertEquals(expectedMovieList, library.getMovies());
     }
 
     @Test
     public void testGetCustomerReturnsExpectedCustomer() {
         Customer customer = createGenericCustomer();
-        Assert.assertTrue(customer.equals(library.getCustomer(userId)));
+        Assert.assertEquals(customer, library.getCustomer(userId));
     }
 
     @Test
     public void testUserLoginCorrectlyValidatesUserCredentials() {
         Assert.assertTrue(library.userLogin(userId, "password"));
-
         Assert.assertFalse(library.userLogin("incorrect id", "password"));
-
         Assert.assertFalse(library.userLogin(userId, "incorrect password"));
     }
 }

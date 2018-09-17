@@ -10,6 +10,6 @@ public class BookTest {
         Book book1 = new Book("TITLE", "author", 2008);
         Book book2 = new Book("title", "author", 2008);
 
-        Assert.assertTrue(book1.equals(book2));
+        Assert.assertEquals(book1, book2);
     }
 }

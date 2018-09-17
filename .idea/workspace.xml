@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71ee3bac-052a-4808-9de3-9e53b633604c" name="Default" comment="Books ratings now persist when checked out and returned">
-      <change beforePath="$PROJECT_DIR$/src/com/twu/biblioteca/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/Book.java" afterDir="false" />
+    <list default="true" id="71ee3bac-052a-4808-9de3-9e53b633604c" name="Default" comment="Restricted access level of Book methods">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/BookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/BookTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/com/twu/biblioteca/LibraryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/LibraryTest.java" afterDir="false" />
     </list>
@@ -14,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/biblioteca$com_twu_biblioteca_in_biblioteca.ic" NAME="com.twu.biblioteca in biblioteca Coverage Results" MODIFIED="1536938571993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/biblioteca$com_twu_biblioteca_in_biblioteca.ic" NAME="com.twu.biblioteca in biblioteca Coverage Results" MODIFIED="1537171461706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.twu.biblioteca.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/biblioteca$MovieTest_testMovieEquality.ic" NAME="MovieTest.testMovieEquality Coverage Results" MODIFIED="1536935478363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -22,7 +22,7 @@
     </SUITE>
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="42" />
+    <option name="myElementSize" value="39" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1732522608">
@@ -49,14 +49,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="10083" />
-          <entry key="txt" value="994" />
+          <entry key="java" value="10267" />
+          <entry key="txt" value="1038" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10083" />
-          <entry key="PLAIN_TEXT" value="994" />
+          <entry key="JAVA" value="10267" />
+          <entry key="PLAIN_TEXT" value="1038" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.mvc.usages" />
@@ -79,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Book.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="75">
+              <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
               <folding>
                 <element signature="e#360#361#0" expanded="true" />
                 <element signature="e#388#389#0" expanded="true" />
@@ -165,11 +165,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/LibraryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="44" column="15" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="15" />
+            <state relative-caret-position="1545">
+              <caret line="103" column="4" selection-start-line="103" selection-start-column="4" selection-end-line="103" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -218,8 +218,8 @@
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Library.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/MovieTest.java" />
         <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Movie.java" />
-        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Book.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/BookTest.java" />
+        <option value="$PROJECT_DIR$/src/com/twu/biblioteca/Book.java" />
         <option value="$PROJECT_DIR$/test/com/twu/biblioteca/LibraryTest.java" />
       </list>
     </option>
@@ -281,7 +281,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537171334141" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537171459732" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -302,7 +302,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BibliotecaApp">
+  <component name="RunManager" selected="JUnit.com.twu.biblioteca in biblioteca">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -427,8 +427,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BibliotecaApp" />
         <item itemvalue="JUnit.com.twu.biblioteca in biblioteca" />
+        <item itemvalue="Application.BibliotecaApp" />
         <item itemvalue="JUnit.MovieTest.testMovieComparisonMethod" />
         <item itemvalue="JUnit.MovieTest.testMovieEquality" />
         <item itemvalue="JUnit.LibraryTest.testReturnNonCheckedOutBookThrowsException" />
@@ -449,20 +449,6 @@
       <workItem from="1536915560438" duration="767000" />
       <workItem from="1536916685593" duration="729000" />
       <workItem from="1536917496850" duration="15514000" />
-    </task>
-    <task id="LOCAL-00030" summary="added assertion to MovieTest to test inequal objects and renamed variables to be clearer">
-      <created>1534696335458</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1534696335458</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Refactored code for generation of generic library into its own method">
-      <created>1534696911367</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1534696911367</updated>
     </task>
     <task id="LOCAL-00032" summary="Changed occurences of checkoutBook in the library test to take a Book object as it's argument">
       <created>1534697333974</created>
@@ -793,13 +779,24 @@
       <option name="project" value="LOCAL" />
       <updated>1536942023038</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="Books ratings now persist when checked out and returned">
+      <created>1537171246994</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1537171246995</updated>
+    </task>
+    <task id="LOCAL-00080" summary="Books ratings now persist when checked out and returned">
+      <created>1537171367711</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1537171367711</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="com_twu_biblioteca_in_biblioteca - 2018.09.14 at 14h 52m 27s.xml">
-      <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="com_twu_biblioteca_in_biblioteca - 2018.09.14 at 14h 52m 40s.xml">
       <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
     </history-entry>
@@ -827,15 +824,18 @@
     <history-entry file="com_twu_biblioteca_in_biblioteca - 2018.09.14 at 16h 22m 53s.xml">
       <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="com_twu_biblioteca_in_biblioteca - 2018.09.17 at 09h 04m 23s.xml">
+      <configuration name="com.twu.biblioteca in biblioteca" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62475000" />
+    <option name="totallyTimeSpent" value="62729000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23891273" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23891273" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -855,7 +855,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32946146" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32866243" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.1988555" />
+      <window_info active="true" anchor="right" id="Coverage" side_tool="true" visible="true" weight="0.1988555" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -907,7 +907,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Checked out books are now associated with a user" />
     <MESSAGE value="Updated test instances of returnBook to take a user id argument" />
     <MESSAGE value="Added userId parameter to returnBook method" />
     <MESSAGE value="Returned books are now checked against the books held by the current user" />
@@ -931,6 +930,7 @@
     <MESSAGE value="Renamed exception class to be generalisable to any library item" />
     <MESSAGE value="Checked out movies are now associated with a user id, so that they can be returned" />
     <MESSAGE value="Users now have the option of returning movies" />
+    <MESSAGE value="Restricted access level of Book methods" />
     <MESSAGE value="Books ratings now persist when checked out and returned" />
     <option name="LAST_COMMIT_MESSAGE" value="Books ratings now persist when checked out and returned" />
   </component>
@@ -1015,16 +1015,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BookTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/MovieTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -1067,20 +1057,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/LibraryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="44" column="15" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/twu/biblioteca/Book.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="75">
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
           <folding>
             <element signature="e#360#361#0" expanded="true" />
             <element signature="e#388#389#0" expanded="true" />
@@ -1088,6 +1068,26 @@
             <element signature="e#526#527#0" expanded="true" />
             <element signature="e#643#644#0" expanded="true" />
             <element signature="e#679#680#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/BookTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/twu/biblioteca/LibraryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1545">
+          <caret line="103" column="4" selection-start-line="103" selection-start-column="4" selection-end-line="103" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
