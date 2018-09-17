@@ -1,6 +1,6 @@
 package com.twu.biblioteca;
 
-public class Movie implements Comparable {
+public class Movie implements Comparable<Movie> {
     private String name;
     private int year;
     private String director;
@@ -53,9 +53,7 @@ public class Movie implements Comparable {
     }
 
     @Override
-    public int compareTo(Object o) {
-        Movie movie = (Movie) o;
-
+    public int compareTo(Movie movie) {
         return this.name.compareTo(movie.getName());
     }
 }
