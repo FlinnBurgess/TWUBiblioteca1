@@ -12,4 +12,15 @@ public class ItemTest {
 
         Assert.assertEquals(item1, item2);
     }
+
+    @Test
+    public void testItemComparison() {
+        Item higherOrderItem = new Item("a", "creator", 2000);
+        Item higherOrderItemDuplicate = new Item("a", "creator", 2000);
+        Item lowerOrderItem = new Item("b", "creator", 2000);
+
+        Assert.assertEquals(0, higherOrderItem.compareTo(higherOrderItemDuplicate));
+        Assert.assertTrue(higherOrderItem.compareTo(lowerOrderItem) < 0);
+        Assert.assertTrue(lowerOrderItem.compareTo(higherOrderItem) > 0);
+    }
 }
