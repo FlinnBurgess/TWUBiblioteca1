@@ -4,23 +4,23 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class UserInterface {
+class UserInterface {
     private ArrayList<String> options = new ArrayList<>(Arrays.asList("List Books", "Checkout Book", "Return Book", "List Movies", "Checkout movie", "Return movie", "My details", "Quit"));
     private Library library;
     private String currentUser;
     private Scanner input = new Scanner(System.in);
 
-    public UserInterface(Library library) {
+    UserInterface(Library library) {
         this.library = library;
     }
 
-    public void displayOptions() {
+    void displayOptions() {
         for (String option : options) {
             System.out.println(option);
         }
     }
 
-    public void loginUser() {
+    void loginUser() {
         boolean loggedIn = false;
 
         while (!loggedIn) {
@@ -34,7 +34,7 @@ public class UserInterface {
         }
     }
 
-    public void takeInput() {
+    void takeInput() {
         String command = input.nextLine().toLowerCase();
 
         while (!command.equals("quit")) {
