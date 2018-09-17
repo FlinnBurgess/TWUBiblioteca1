@@ -21,6 +21,14 @@ class Library {
         return bookList;
     }
 
+    void checkout(Book book, String userId) throws ItemNotAvailableException {
+        checkOutBook(book, userId);
+    }
+
+    void checkout(Movie movie, String userId) throws ItemNotAvailableException {
+        checkOutMovie(movie, userId);
+    }
+
     void checkOutBook(Book book, String userId) throws ItemNotAvailableException {
         if (bookList.contains(book)) {
             if (!checkedOutBooks.containsKey(userId)) {
