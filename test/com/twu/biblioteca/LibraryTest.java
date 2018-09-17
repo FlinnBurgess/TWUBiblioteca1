@@ -94,6 +94,11 @@ public class LibraryTest {
         library.returnBook(book1, userId);
     }
 
+    @Test(expected = ItemNotCheckedOutException.class)
+    public void testReturnNonCheckedOutMovieThrowsException() throws ItemNotCheckedOutException {
+        library.returnMovie(movie1, userId);
+    }
+
     @Test
     public void testCheckoutMovieUpdatesListOfAvailableMovies() throws ItemNotAvailableException {
         library.checkOutMovie(movie1, userId);
