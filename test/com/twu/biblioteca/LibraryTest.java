@@ -50,17 +50,6 @@ public class LibraryTest {
     }
 
     @Test
-    public void testCheckoutRemovesItemsFromAvailableItems() throws ItemNotAvailableException {
-        library.checkout(book1, userId);
-        ArrayList<Book> expectedAvailableBooks = new ArrayList<>(Collections.singletonList(book2));
-        Assert.assertEquals(expectedAvailableBooks, library.getBooks());
-
-        library.checkout(movie1, userId);
-        ArrayList<Movie> expectedAvailableMovies = new ArrayList<>(Collections.singletonList(movie2));
-        Assert.assertEquals(expectedAvailableMovies, library.getMovies());
-    }
-
-    @Test
     public void testCheckoutBookRemovesBookFromAvailableBooks() throws ItemNotAvailableException {
         library.checkOutBook(book1, userId);
         ArrayList<Book> bookList = new ArrayList<>(Collections.singletonList(book2));
