@@ -71,6 +71,12 @@ public class LibraryTest {
         library.checkOutBook(unavailableBook, userId);
     }
 
+    @Test(expected = ItemNotAvailableException.class)
+    public void testCheckoutMovieThrowsExceptionOnUnavailableMovie() throws ItemNotAvailableException {
+        Movie unavailableMovie = new Movie("unavailable", 10, "unavailable");
+        library.checkOutMovie(unavailableMovie, userId);
+    }
+
     @Test
     public void testReturnBookUpdatesListOfAvailableBooks() throws ItemNotAvailableException, ItemNotCheckedOutException {
         library.checkOutBook(book1, userId);
