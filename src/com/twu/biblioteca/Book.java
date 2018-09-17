@@ -1,6 +1,6 @@
 package com.twu.biblioteca;
 
-public class Book implements Comparable {
+public class Book implements Comparable<Book> {
     private String title;
     private String author;
     private int yearPublished;
@@ -38,9 +38,7 @@ public class Book implements Comparable {
     }
 
     @Override
-    public int compareTo(Object o) {
-        Book bookToCompare = (Book) o;
-
-        return this.title.compareTo(bookToCompare.getTitle());
+    public int compareTo(Book book) {
+        return this.title.compareTo(book.getTitle());
     }
 }
