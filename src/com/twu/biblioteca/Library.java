@@ -21,12 +21,12 @@ class Library {
         return bookList;
     }
 
-    void checkout(Book book, String userId) throws ItemNotAvailableException {
-        checkOutBook(book, userId);
-    }
-
-    void checkout(Movie movie, String userId) throws ItemNotAvailableException {
-        checkOutMovie(movie, userId);
+    void checkout(Item item, String userId) throws ItemNotAvailableException {
+        if (item.getClass().equals(Book.class)) {
+            checkOutBook((Book) item, userId);
+        } else {
+            checkOutMovie((Movie) item, userId);
+        }
     }
 
     void checkOutBook(Book book, String userId) throws ItemNotAvailableException {
