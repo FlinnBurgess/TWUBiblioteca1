@@ -3,7 +3,6 @@ package com.twu.biblioteca;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -56,7 +55,7 @@ public class LibraryTest {
         Assert.assertEquals(expectedBookList, library.getBooks());
 
         library.checkout(movie1, userId);
-        ArrayList<Book> expectedMovieList = new ArrayList<>(Collections.singletonList(movie2));
+        ArrayList<Movie> expectedMovieList = new ArrayList<>(Collections.singletonList(movie2));
         Assert.assertEquals(expectedMovieList, library.getBooks());
     }
 
