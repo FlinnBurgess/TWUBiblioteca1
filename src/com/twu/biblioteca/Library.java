@@ -1,47 +1,54 @@
 package com.twu.biblioteca;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 
 class Library {
-    private ArrayList<Book> bookList;
-    private ArrayList<Movie> movieList;
-    private HashMap<String, ArrayList<Movie>> checkedOutMovies = new HashMap<>();
-    private HashMap<String, ArrayList<Book>> checkedOutBooks= new HashMap<>();
+    private ArrayList<Item> availableItems;
+    private HashMap<String, ArrayList<Item>> checkedOutItems = new HashMap<>();
     private HashMap<String, Customer> customers = new HashMap<>();
 
-    Library(ArrayList<Book> bookList, ArrayList<Movie> movieList) {
-        this.bookList = bookList;
-        this.movieList = movieList;
+    Library(ArrayList<Item> availableItems) {
+        this.availableItems = availableItems;
     }
 
     ArrayList<Book> getBooks() {
+        ArrayList<Book> bookList = new ArrayList<>();
+
+        for (Item item : availableItems) {
+            if (item.getClass().equals(Book.class)) {
+                bookList.add((Book) item);
+            }
+        }
+
         Collections.sort(bookList);
+
         return bookList;
     }
 
     void checkout(Item item, String userId) throws ItemNotAvailableException {
-        if (item.getClass().equals(Book.class)) {
-            checkOutBook((Book) item, userId);
-        } else {
-            checkOutMovie((Movie) item, userId);
-        }
-    }
-
-    void checkOutBook(Book book, String userId) throws ItemNotAvailableException {
-        if (bookList.contains(book)) {
-            if (!checkedOutBooks.containsKey(userId)) {
-                checkedOutBooks.put(userId, new ArrayList<>());
+        if (availableItems.contains(item)) {
+            if (!checkedOutItems.containsKey(userId)) {
+                checkedOutItems.put(userId, new ArrayList<>());
             }
 
-            checkedOutBooks.get(userId).add(book);
-            bookList.remove(book);
+            checkedOutItems.get(userId).add(availableItems.get(availableItems.indexOf(item)));
+            availableItems.remove(item);
         } else {
-            throw new ItemNotAvailableException(
-                    "Book with title: " + book.getName() + ", author: " + book.getCreator()
-                            + " and date published: " + book.getYear() + " not found"
-            );
+            throw new ItemNotAvailableException(String.format(
+                    "Item with name: %s, creator: %s, and year: %d not found.",
+                    item.getName(),
+                    item.getCreator(),
+                    item.getYear()
+            ));
+        }
+
+        if (item.getClass().equals(Book.class)) {
+            System.out.println("Thank you! Enjoy the book.");
+        } else {
+            System.out.println("Thank you! Enjoy the movie.");
         }
     }
 
@@ -64,26 +71,6 @@ class Library {
         return movieList;
     }
 
-    void checkOutMovie(Movie movie, String userId) throws ItemNotAvailableException {
-        if (movieList.contains(movie)) {
-            if (!checkedOutMovies.containsKey(userId)) {
-                checkedOutMovies.put(userId, new ArrayList<>());
-            }
-
-            checkedOutMovies.get(userId).add(movieList.get(movieList.indexOf(movie)));
-            movieList.remove(movie);
-
-            System.out.println("Thank you! Enjoy the movie");
-        } else {
-            throw new ItemNotAvailableException(
-                String.format(
-                        "Movie with name: %s, year: %d, and director: %s not found",
-                        movie.getName(), movie.getYear(), movie.getRating()
-                )
-            );
-        }
-    }
-
     void returnMovie(Movie movie, String userId) throws ItemNotCheckedOutException {
         if (checkedOutMovies.containsKey(userId) && checkedOutMovies.get(userId).contains(movie)) {
             ArrayList<Movie> usersCheckedOutMovies = checkedOutMovies.get(userId);
@@ -91,12 +78,12 @@ class Library {
             usersCheckedOutMovies.remove(movie);
         } else {
             throw new ItemNotCheckedOutException(
-                String.format(
-                    "Movie with name: %s, year: %d, and director: %s has not been checked out of this library.",
-                    movie.getName(),
-                    movie.getYear(),
-                    movie.getCreator()
-                )
+                    String.format(
+                            "Movie with name: %s, year: %d, and director: %s has not been checked out of this library.",
+                            movie.getName(),
+                            movie.getYear(),
+                            movie.getCreator()
+                    )
             );
         }
 
