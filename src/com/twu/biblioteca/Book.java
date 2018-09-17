@@ -11,15 +11,15 @@ public class Book implements Comparable {
         this.yearPublished = yearPublished;
     }
 
-    public String getTitle() {
+    String getTitle() {
         return title;
     }
 
-    public String getAuthor() {
+    String getAuthor() {
         return author;
     }
 
-    public int getYearPublished() {
+    int getYearPublished() {
         return yearPublished;
     }
 
