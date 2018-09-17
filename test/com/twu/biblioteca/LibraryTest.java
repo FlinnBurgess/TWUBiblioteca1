@@ -40,10 +40,9 @@ public class LibraryTest {
     @Test
     public void testLibraryReturnsCorrectBookList() {
         ArrayList<Book> bookList = new ArrayList<>(Arrays.asList(book1, book2));
-        ArrayList<Book> differentBookList = new ArrayList<>(Arrays.asList(book1));
+        ArrayList<Book> differentBookList = new ArrayList<>(Collections.singletonList(book1));
 
         Collections.sort(bookList);
-        Collections.sort(differentBookList);
 
         Assert.assertEquals(bookList, library.getBooks());
         Assert.assertNotEquals(differentBookList, library.getBooks());
@@ -52,10 +51,7 @@ public class LibraryTest {
     @Test
     public void testCheckoutBookRemovesBookFromAvailableBooks() throws ItemNotAvailableException {
         library.checkOutBook(book1, userId);
-
-        ArrayList<Book> bookList = new ArrayList<>(Arrays.asList(book2));
-        Collections.sort(bookList);
-
+        ArrayList<Book> bookList = new ArrayList<>(Collections.singletonList(book2));
         Assert.assertEquals(bookList, library.getBooks());
     }
 
@@ -82,8 +78,7 @@ public class LibraryTest {
 
         library.returnBook(book1, userId);
 
-        ArrayList<Book> bookList = new ArrayList<>(Arrays.asList(book1));
-        Collections.sort(bookList);
+        ArrayList<Book> bookList = new ArrayList<>(Collections.singletonList(book1));
 
         Assert.assertEquals(bookList, library.getBooks());
     }
