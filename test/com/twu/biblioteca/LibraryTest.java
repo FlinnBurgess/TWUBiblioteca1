@@ -56,7 +56,7 @@ public class LibraryTest {
 
         library.checkout(movie1, userId);
         ArrayList<Movie> expectedMovieList = new ArrayList<>(Collections.singletonList(movie2));
-        Assert.assertEquals(expectedMovieList, library.getBooks());
+        Assert.assertEquals(expectedMovieList, library.getMovies());
     }
 
     @Test
