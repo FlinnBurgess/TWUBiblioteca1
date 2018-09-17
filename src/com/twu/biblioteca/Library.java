@@ -15,17 +15,27 @@ class Library {
     }
 
     ArrayList<Book> getBooks() {
-        ArrayList<Book> bookList = new ArrayList<>();
+        ArrayList<Book> bookList = getItemsOfType(Book.class);
+        Collections.sort(bookList);
+        return bookList;
+    }
+
+    ArrayList<Movie> getMovies() {
+        ArrayList<Movie> movieList = getItemsOfType(Movie.class);
+        Collections.sort(movieList);
+        return movieList;
+    }
+
+    <T> ArrayList<T> getItemsOfType(Class<T> itemClass) {
+        ArrayList<T> itemList = new ArrayList<>();
 
         for (Item item : availableItems) {
-            if (item.getClass().equals(Book.class)) {
-                bookList.add((Book) item);
+            if (item.getClass().equals(itemClass)) {
+                itemList.add(itemClass.cast(item));
             }
         }
 
-        Collections.sort(bookList);
-
-        return bookList;
+        return itemList;
     }
 
     void checkout(Item item, String userId) throws ItemNotAvailableException {
@@ -64,11 +74,6 @@ class Library {
                     )
             );
         }
-    }
-
-    ArrayList<Movie> getMovies() {
-        Collections.sort(movieList);
-        return movieList;
     }
 
     void returnMovie(Movie movie, String userId) throws ItemNotCheckedOutException {
