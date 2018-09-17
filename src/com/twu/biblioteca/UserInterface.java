@@ -50,7 +50,7 @@ public class UserInterface {
                 System.out.println("Books currently available:");
 
                 for (Book book : library.getBooks()) {
-                    System.out.println(book.getTitle() + ", " + book.getAuthor() + ", " + book.getYearPublished());
+                    System.out.println(book.getName() + ", " + book.getCreator() + ", " + book.getYear());
                 }
 
                 break;

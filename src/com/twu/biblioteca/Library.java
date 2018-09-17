@@ -31,8 +31,8 @@ class Library {
             bookList.remove(book);
         } else {
             throw new ItemNotAvailableException(
-                    "Book with title: " + book.getTitle() + ", author: " + book.getAuthor()
-                            + " and date published: " + book.getYearPublished() + " not found"
+                    "Book with title: " + book.getName() + ", author: " + book.getCreator()
+                            + " and date published: " + book.getYear() + " not found"
             );
         }
     }
@@ -45,7 +45,7 @@ class Library {
             throw new ItemNotCheckedOutException(
                     String.format(
                             "Book with title: %s, author: %s and date published: %d has not been checked out of this library",
-                            book.getTitle(), book.getAuthor(), book.getYearPublished()
+                            book.getName(), book.getCreator(), book.getYear()
                     )
             );
         }
