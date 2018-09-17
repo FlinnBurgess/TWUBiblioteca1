@@ -10,52 +10,21 @@ public class MovieTest {
     private int testRating = 5;
 
     @Test
-    public void testMovieEquality() {
-        Movie movie = createRatedMovie();
-        Movie sameMovie = createRatedMovie();
-
-        Assert.assertEquals(movie, sameMovie);
-
-        Movie differentMovie = new Movie("different name", testYear, testDirector, testRating);
-
-        Assert.assertNotEquals(movie, differentMovie);
-        Assert.assertNotEquals("wrong object", movie);
-    }
-
-    @Test
     public void testHasRatingReturnsCorrectValues() {
-        Movie rated = createRatedMovie();
+        Movie rated = new Movie(testName, testYear, testDirector, testRating);
         Assert.assertTrue(rated.hasRating());
 
-        Movie unrated = createUnratedMovie();
+        Movie unrated = new Movie(testName, testYear, testDirector);
         Assert.assertFalse(unrated.hasRating());
     }
 
     @Test
     public void testGetRatingReturnsCorrectValue() {
-        Movie rated = createRatedMovie();
-        Assert.assertEquals(rated.getRating(), testRating);
+        Movie rated = new Movie(testName, testYear, testDirector, testRating);
+        Assert.assertEquals(testRating, rated.getRating());
 
-        Movie unrated = createUnratedMovie();
-        Assert.assertEquals(unrated.getRating(), -1);
+        Movie unrated = new Movie(testName, testYear, testDirector);
+        Assert.assertEquals(-1, unrated.getRating());
     }
 
-    @Test
-    public void testMovieComparisonMethod() {
-        Movie movie1 = new Movie("1", testYear, testDirector, testRating);
-        Movie movie1Duplicate = new Movie("1", testYear, testDirector, testRating);
-        Movie movie2 = new Movie("2", testYear, testDirector, testRating);
-
-        Assert.assertEquals(0, movie1.compareTo(movie1Duplicate));
-        Assert.assertEquals(movie1.compareTo(movie2), -1);
-        Assert.assertEquals(1, movie2.compareTo(movie1));
-    }
-
-    private Movie createRatedMovie() {
-        return new Movie(testName, testYear, testDirector, testRating);
-    }
-
-    private Movie createUnratedMovie() {
-        return new Movie(testName, testYear, testDirector);
-    }
 }
