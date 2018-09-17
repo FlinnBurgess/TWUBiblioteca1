@@ -110,6 +110,16 @@ public class LibraryTest {
     }
 
     @Test
+    public void testReturnMovieUpdatesListOfAvailableMovies() throws ItemNotAvailableException, ItemNotCheckedOutException {
+        library.checkOutMovie(movie1, userId);
+        library.returnMovie(movie1, userId);
+
+        ArrayList<Movie> expectedMovieList = new ArrayList<>(Arrays.asList(movie1, movie2));
+
+        Assert.assertEquals(expectedMovieList, library.getMovies());
+    }
+
+    @Test
     public void testGetCustomerReturnsExpectedCustomer() {
         Customer customer = createGenericCustomer();
         Assert.assertEquals(customer, library.getCustomer(userId));
