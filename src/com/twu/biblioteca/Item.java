@@ -1,11 +1,11 @@
 package com.twu.biblioteca;
 
 public class Item implements Comparable<Item> {
-    String name;
-    String creator;
-    int year;
+    private String name;
+    private String creator;
+    private int year;
 
-    public Item(String name, String creator, int year) {
+    Item(String name, String creator, int year) {
         this.name = name;
         this.creator = creator;
         this.year = year;
