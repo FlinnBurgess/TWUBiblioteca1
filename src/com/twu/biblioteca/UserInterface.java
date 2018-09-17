@@ -78,7 +78,7 @@ public class UserInterface {
                 break;
             case "list movies":
                 for (Movie movie : library.getMovies()) {
-                    String movieDetails = String.format("%s, %d, %s, ", movie.getName(), movie.getYear(), movie.getDirector());
+                    String movieDetails = String.format("%s, %d, %s, ", movie.getName(), movie.getYear(), movie.getCreator());
                     if (movie.hasRating()) {
                         movieDetails +=  movie.getRating();
                     } else {

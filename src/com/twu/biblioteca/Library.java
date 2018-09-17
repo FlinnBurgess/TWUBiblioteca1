@@ -87,7 +87,7 @@ class Library {
                     "Movie with name: %s, year: %d, and director: %s has not been checked out of this library.",
                     movie.getName(),
                     movie.getYear(),
-                    movie.getDirector()
+                    movie.getCreator()
                 )
             );
         }
