@@ -58,7 +58,7 @@ class UserInterface {
                 Book bookToCheckout = generateBookFromUserInput();
 
                 try {
-                    library.checkOutBook(bookToCheckout, currentUser);
+                    library.checkout(bookToCheckout, currentUser);
                     System.out.println("Thank you! Enjoy the book");
                 } catch (ItemNotAvailableException exception) {
                     System.out.println("That book is not available.");
@@ -69,7 +69,7 @@ class UserInterface {
                 Book bookToReturn = generateBookFromUserInput();
 
                 try {
-                    library.returnBook(bookToReturn, currentUser);
+                    library.returnItem(bookToReturn, currentUser);
                     System.out.println("Thank you for returning the book.");
                 } catch (ItemNotCheckedOutException exception) {
                     System.out.println("That is not a valid book to return.");
@@ -92,7 +92,7 @@ class UserInterface {
             case "checkout movie":
                 Movie movieToCheckout = generateMovieFromUserInput();
                 try {
-                    library.checkOutMovie(movieToCheckout, currentUser);
+                    library.checkout(movieToCheckout, currentUser);
                 } catch (ItemNotAvailableException e) {
                     System.out.println("That movie is not available.");
                 }
@@ -101,7 +101,7 @@ class UserInterface {
             case "return movie":
                 Movie movieToReturn = generateMovieFromUserInput();
                 try {
-                    library.returnMovie(movieToReturn, currentUser);
+                    library.returnItem(movieToReturn, currentUser);
                     System.out.println("Thank you for returning the movie.");
                 } catch (ItemNotCheckedOutException e) {
                     System.out.println("That movie is not checked out.");

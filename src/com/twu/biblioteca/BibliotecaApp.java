@@ -20,13 +20,12 @@ public class BibliotecaApp {
         Book book1 = new Book("Book 1", "Author 1", 2018);
         Book book2 = new Book("Book 2", "Author 2", 2012);
         Book book3 = new Book("Book 3", "Author 2", 2015);
-        ArrayList<Book> bookList = new ArrayList<>(Arrays.asList(book1, book2, book3));
-
         Movie movie1 = new Movie("Movie 1", 2010, "Director 1", 3);
         Movie movie2 = new Movie("Movie 2", 2002, "Director 2");
-        ArrayList<Movie> movieList = new ArrayList<>(Arrays.asList(movie1, movie2));
 
-        Library library = new Library(bookList, movieList);
+        ArrayList<Item> itemList = new ArrayList<>(Arrays.asList(book1, book2, book3, movie1, movie2));
+
+        Library library = new Library(itemList);
         library.addCustomer(new Customer("name", "email@address.com", "01234 567 890", "123-4567", "password"));
 
         return library;
